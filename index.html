@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functional Analysis — Interactive Course</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <button id="sidebar-toggle" aria-label="Toggle sidebar">&#9776;</button>
+        <aside id="sidebar">
+            <div id="sidebar-header">
+                <h1>Functional Analysis</h1>
+                <p class="author">Rudin / Conway / Kreyszig</p>
+                <div id="progress-container">
+                    <div id="progress-bar"><div id="progress-fill"></div></div>
+                    <span id="progress-text">0%</span>
+                </div>
+            </div>
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Search topics...">
+            </div>
+            <nav id="chapter-nav"></nav>
+            <div id="sidebar-footer"><p class="copyright-notice" style="font-size:0.7rem;color:#888;margin-top:12px;text-align:center;">&copy; 2026 Hengzhe Zhao &middot; AGPL-3.0 &amp; Commercial</p>
+                <button id="reset-progress">Reset Progress</button>
+            </div>
+        </aside>
+        <main id="main-content">
+            <div id="welcome-screen">
+                <div class="welcome-hero">
+                    <h1>泛函分析</h1>
+                    <h2>Functional Analysis &middot; Interactive</h2>
+                    <p class="welcome-description">
+                        From normed spaces and Banach spaces to spectral theory and operator algebras.
+                        A rigorous journey through infinite-dimensional analysis with interactive visualizations.
+                    </p>
+                </div>
+                <div class="roadmap">
+                    <h3>Course Roadmap</h3>
+                    <div class="roadmap-parts">
+                        <div class="roadmap-part">
+                            <h4>Part A: Foundations</h4>
+                            <ul>
+                                <li>Ch 0: Metric Spaces &amp; Topological Preliminaries</li>
+                                <li>Ch 1: Normed Spaces</li>
+                                <li>Ch 2: Banach Spaces</li>
+                                <li>Ch 3: Inner Product Spaces &amp; Hilbert Spaces</li>
+                                <li>Ch 4: Orthogonality &amp; Projections</li>
+                            </ul>
+                        </div>
+                        <div class="roadmap-part">
+                            <h4>Part B: The Big Theorems</h4>
+                            <ul>
+                                <li>Ch 5: Bounded Linear Operators</li>
+                                <li>Ch 6: Hahn&ndash;Banach Theorem</li>
+                                <li>Ch 7: Baire Category Theorem</li>
+                                <li>Ch 8: Uniform Boundedness Principle</li>
+                                <li>Ch 9: Open Mapping &amp; Closed Graph</li>
+                            </ul>
+                        </div>
+                        <div class="roadmap-part">
+                            <h4>Part C: Duality &amp; Weak Topologies</h4>
+                            <ul>
+                                <li>Ch 10: Dual Spaces</li>
+                                <li>Ch 11: Weak &amp; Weak* Topologies</li>
+                                <li>Ch 12: Reflexive Spaces</li>
+                                <li>Ch 13: L<sup>p</sup> Spaces</li>
+                            </ul>
+                        </div>
+                        <div class="roadmap-part">
+                            <h4>Part D: Spectral Theory</h4>
+                            <ul>
+                                <li>Ch 14: Compact Operators</li>
+                                <li>Ch 15: Fredholm Theory</li>
+                                <li>Ch 16: Spectral Theory for Compact Operators</li>
+                                <li>Ch 17: Banach Algebras &amp; Gelfand Theory</li>
+                            </ul>
+                        </div>
+                        <div class="roadmap-part">
+                            <h4>Part E: Advanced Topics</h4>
+                            <ul>
+                                <li>Ch 18: Unbounded Operators</li>
+                                <li>Ch 19: Distributions &amp; Sobolev Spaces</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p class="welcome-start">Select a chapter from the sidebar to begin.</p>
+            </div>
+            <div id="chapter-content" style="display:none;">
+                <div id="chapter-header">
+                    <div id="chapter-number-badge"></div>
+                    <h1 id="chapter-title"></h1>
+                    <p id="chapter-subtitle"></p>
+                </div>
+                <div id="section-tabs"></div>
+                <article id="section-content"></article>
+                <div id="exercises-panel" style="display:none;">
+                    <h3>Exercises</h3>
+                    <div id="exercises-list"></div>
+                </div>
+                <div id="chapter-nav-buttons">
+                    <button id="prev-btn" disabled>&larr; Previous</button>
+                    <span id="section-indicator"></span>
+                    <button id="next-btn">Next &rarr;</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    <script src="viz-engine.js"></script>
+
+    <!-- Chapter manifest for lazy loading -->
+    <script>
+    window.CHAPTER_MANIFEST = [
+        {number:0,  id:'ch00', title:'Metric Spaces & Topological Preliminaries', file:'ch00-metric-spaces'},
+        {number:1,  id:'ch01', title:'Normed Spaces',                              file:'ch01-normed-spaces'},
+        {number:2,  id:'ch02', title:'Banach Spaces',                              file:'ch02-banach-spaces'},
+        {number:3,  id:'ch03', title:'Inner Product Spaces & Hilbert Spaces',      file:'ch03-hilbert-spaces'},
+        {number:4,  id:'ch04', title:'Orthogonality & Projections',                file:'ch04-orthogonality'},
+        {number:5,  id:'ch05', title:'Bounded Linear Operators',                   file:'ch05-bounded-operators'},
+        {number:6,  id:'ch06', title:'Hahn–Banach Theorem',                        file:'ch06-hahn-banach'},
+        {number:7,  id:'ch07', title:'Baire Category Theorem',                     file:'ch07-baire-category'},
+        {number:8,  id:'ch08', title:'Uniform Boundedness Principle',              file:'ch08-uniform-boundedness'},
+        {number:9,  id:'ch09', title:'Open Mapping & Closed Graph Theorems',       file:'ch09-open-mapping'},
+        {number:10, id:'ch10', title:'Dual Spaces',                                file:'ch10-dual-spaces'},
+        {number:11, id:'ch11', title:'Weak & Weak* Topologies',                    file:'ch11-weak-topologies'},
+        {number:12, id:'ch12', title:'Reflexive Spaces',                           file:'ch12-reflexive-spaces'},
+        {number:13, id:'ch13', title:'Lp Spaces',                                  file:'ch13-lp-spaces'},
+        {number:14, id:'ch14', title:'Compact Operators',                          file:'ch14-compact-operators'},
+        {number:15, id:'ch15', title:'Fredholm Theory',                            file:'ch15-fredholm'},
+        {number:16, id:'ch16', title:'Spectral Theory for Compact Operators',      file:'ch16-spectral-compact'},
+        {number:17, id:'ch17', title:'Banach Algebras & Gelfand Theory',           file:'ch17-banach-algebras'},
+        {number:18, id:'ch18', title:'Unbounded Operators',                        file:'ch18-unbounded-operators'},
+        {number:19, id:'ch19', title:'Distributions & Sobolev Spaces',             file:'ch19-distributions'}
+    ];
+    </script>
+
+    <script src="app.js"></script>
+</body>
+</html>
