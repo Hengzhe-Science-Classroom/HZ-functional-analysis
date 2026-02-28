@@ -873,7 +873,628 @@ window.CHAPTERS.push({
                 }
             ]
         },
-        // ===== Section 4 will be added next =====
-        // placeholder
+        // ===== Section 4: Hilbert-Schmidt and Trace Class =====
+        {
+            id: 'ch16-sec04',
+            title: 'Hilbert-Schmidt and Trace Class',
+            content: `
+                <h2>Hilbert-Schmidt and Trace Class Operators</h2>
+
+                <div class="env-block intuition">
+                    <div class="env-title">Intuition</div>
+                    <div class="env-body">
+                        <p>Among compact operators, there are natural subclasses defined by summability conditions on the singular values. Hilbert-Schmidt operators require square-summable singular values and form a Hilbert space themselves. Trace class (nuclear) operators require absolutely summable singular values and admit a well-defined trace, generalizing the matrix trace to infinite dimensions.</p>
+                    </div>
+                </div>
+
+                <div class="env-block definition">
+                    <div class="env-title">Definition 16.12 (Hilbert-Schmidt Operator)</div>
+                    <div class="env-body">
+                        <p>Let \\\\(H\\\\) be a separable Hilbert space with orthonormal basis \\\\(\\\\{e_i\\\\}\\\\). A bounded operator \\\\(T \\\\in \\\\mathcal{B}(H)\\\\) is called <strong>Hilbert-Schmidt</strong> if</p>
+                        \\\\[\\\\|T\\\\|_{\\\\mathrm{HS}}^2 = \\\\sum_{i=1}^{\\\\infty} \\\\|Te_i\\\\|^2 < \\\\infty.\\\\]
+                        <p>The quantity \\\\(\\\\|T\\\\|_{\\\\mathrm{HS}}\\\\) is called the <strong>Hilbert-Schmidt norm</strong>. This definition is independent of the choice of orthonormal basis.</p>
+                    </div>
+                </div>
+
+                <div class="env-block theorem">
+                    <div class="env-title">Theorem 16.13 (Properties of Hilbert-Schmidt Operators)</div>
+                    <div class="env-body">
+                        <p>Let \\\\(\\\\mathcal{S}_2(H)\\\\) denote the set of Hilbert-Schmidt operators on \\\\(H\\\\). Then:</p>
+                        <ol>
+                            <li>\\\\(\\\\mathcal{S}_2(H)\\\\) is a two-sided ideal in \\\\(\\\\mathcal{B}(H)\\\\).</li>
+                            <li>Every Hilbert-Schmidt operator is compact.</li>
+                            <li>\\\\(\\\\|T\\\\| \\\\leq \\\\|T\\\\|_{\\\\mathrm{HS}}\\\\) (operator norm bounded by HS norm).</li>
+                            <li>\\\\(\\\\mathcal{S}_2(H)\\\\) is a Hilbert space with inner product \\\\(\\\\langle S, T \\\\rangle_{\\\\mathrm{HS}} = \\\\sum_i \\\\langle Se_i, Te_i \\\\rangle\\\\).</li>
+                            <li>If \\\\(T\\\\) has eigenvalues \\\\(\\\\{\\\\lambda_n\\\\}\\\\) (with multiplicity), then \\\\(\\\\|T\\\\|_{\\\\mathrm{HS}}^2 = \\\\sum_n |\\\\lambda_n|^2\\\\) when \\\\(T\\\\) is normal.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="env-block proof">
+                    <div class="env-title">Proof (Basis Independence)</div>
+                    <div class="env-body">
+                        <p>Let \\\\(\\\\{e_i\\\\}\\\\) and \\\\(\\\\{f_j\\\\}\\\\) be two orthonormal bases. By Parseval's identity:</p>
+                        \\\\[\\\\sum_i \\\\|Te_i\\\\|^2 = \\\\sum_i \\\\sum_j |\\\\langle Te_i, f_j \\\\rangle|^2 = \\\\sum_j \\\\sum_i |\\\\langle e_i, T^*f_j \\\\rangle|^2 = \\\\sum_j \\\\|T^*f_j\\\\|^2.\\\\]
+                        <p>By symmetry (swapping \\\\(T, T^*\\\\) and the bases), the sum is also \\\\(\\\\sum_j \\\\|Tf_j\\\\|^2\\\\). Hence the HS norm is basis-independent.</p>
+                        <div class="qed">∎</div>
+                    </div>
+                </div>
+
+                <div class="env-block example">
+                    <div class="env-title">Example 16.14 (Integral Operators)</div>
+                    <div class="env-body">
+                        <p>An integral operator \\\\((Kf)(x) = \\\\int k(x,t) f(t)\\,dt\\\\) on \\\\(L^2(\\\\Omega)\\\\) is Hilbert-Schmidt if and only if its kernel \\\\(k \\\\in L^2(\\\\Omega \\\\times \\\\Omega)\\\\), and in that case</p>
+                        \\\\[\\\\|K\\\\|_{\\\\mathrm{HS}}^2 = \\\\int_{\\\\Omega} \\\\int_{\\\\Omega} |k(x,t)|^2 \\,dx\\,dt.\\\\]
+                        <p>This gives a simple sufficient condition for compactness of integral operators.</p>
+                    </div>
+                </div>
+
+                <div class="env-block definition">
+                    <div class="env-title">Definition 16.15 (Trace Class / Nuclear Operators)</div>
+                    <div class="env-body">
+                        <p>An operator \\\\(T \\\\in \\\\mathcal{B}(H)\\\\) is <strong>trace class</strong> (or <strong>nuclear</strong>) if</p>
+                        \\\\[\\\\|T\\\\|_1 = \\\\sum_{n=1}^{\\\\infty} s_n(T) < \\\\infty,\\\\]
+                        <p>where \\\\(s_n(T)\\\\) are the singular values of \\\\(T\\\\) (eigenvalues of \\\\(|T| = (T^*T)^{1/2}\\\\)). Equivalently, \\\\(T\\\\) is trace class if \\\\(\\\\sum_i |\\\\langle |T| e_i, e_i \\\\rangle| < \\\\infty\\\\) for some (hence any) orthonormal basis.</p>
+                    </div>
+                </div>
+
+                <div class="env-block definition">
+                    <div class="env-title">Definition 16.16 (Trace)</div>
+                    <div class="env-body">
+                        <p>For a trace class operator \\\\(T\\\\), the <strong>trace</strong> is defined by</p>
+                        \\\\[\\\\operatorname{tr}(T) = \\\\sum_{i=1}^{\\\\infty} \\\\langle Te_i, e_i \\\\rangle,\\\\]
+                        <p>where \\\\(\\\\{e_i\\\\}\\\\) is any orthonormal basis. This sum converges absolutely and is independent of the basis. If \\\\(T\\\\) is trace class, then \\\\(\\\\operatorname{tr}(T) = \\\\sum_n \\\\lambda_n\\\\) where \\\\(\\\\{\\\\lambda_n\\\\}\\\\) are the eigenvalues of \\\\(T\\\\) (Lidskii's theorem).</p>
+                    </div>
+                </div>
+
+                <div class="env-block theorem">
+                    <div class="env-title">Theorem 16.17 (Schatten Class Hierarchy)</div>
+                    <div class="env-body">
+                        <p>The Schatten classes satisfy:</p>
+                        \\\\[\\\\text{Finite rank} \\\\subset \\\\mathcal{S}_1(H) \\\\subset \\\\mathcal{S}_2(H) \\\\subset \\\\mathcal{K}(H) \\\\subset \\\\mathcal{B}(H),\\\\]
+                        <p>where \\\\(\\\\mathcal{S}_1\\\\) = trace class, \\\\(\\\\mathcal{S}_2\\\\) = Hilbert-Schmidt, \\\\(\\\\mathcal{K}\\\\) = compact operators. Moreover, \\\\(\\\\|T\\\\| \\\\leq \\\\|T\\\\|_{\\\\mathrm{HS}} \\\\leq \\\\|T\\\\|_1\\\\) and \\\\(\\\\mathcal{S}_1 = \\\\mathcal{S}_2 \\\\cdot \\\\mathcal{S}_2\\\\) (every trace class operator is a product of two HS operators).</p>
+                    </div>
+                </div>
+
+                <p>The visualization below shows the Schatten class hierarchy and how singular values determine membership.</p>
+
+                <div class="viz-placeholder" data-viz="schatten-hierarchy-viz"></div>
+
+                <p>This visualization compares the operator norm, Hilbert-Schmidt norm, and trace norm for operators with different singular value decay rates.</p>
+
+                <div class="viz-placeholder" data-viz="norm-comparison-viz"></div>
+            `,
+            visualizations: [
+                {
+                    id: 'schatten-hierarchy-viz',
+                    title: 'Schatten Class Hierarchy',
+                    description: 'Visualize how singular value decay determines Schatten class membership',
+                    setup: function(container, controls) {
+                        var viz = new VizEngine(container, {width: 560, height: 420, scale: 40});
+
+                        var decayPow = 1.0;
+                        var nSingular = 20;
+
+                        VizEngine.createSlider(controls, 'Decay s_n ~ 1/n^p, p =', 0.3, 3.0, decayPow, 0.1, function(v) { decayPow = v; draw(); });
+                        VizEngine.createSlider(controls, 'Num singular values', 5, 40, nSingular, 1, function(v) { nSingular = Math.round(v); draw(); });
+
+                        function draw() {
+                            viz.clear();
+                            var ctx = viz.ctx;
+                            var pad = {left: 70, right: 30, top: 60, bottom: 50};
+                            var plotW = viz.width - pad.left - pad.right;
+                            var plotH = viz.height - pad.top - pad.bottom;
+
+                            ctx.strokeStyle = viz.colors.axis;
+                            ctx.lineWidth = 1.5;
+                            ctx.beginPath();
+                            ctx.moveTo(pad.left, pad.top);
+                            ctx.lineTo(pad.left, pad.top + plotH);
+                            ctx.lineTo(pad.left + plotW, pad.top + plotH);
+                            ctx.stroke();
+
+                            var singVals = [];
+                            var sumS = 0;
+                            var sumS2 = 0;
+                            var maxS = 0;
+                            for (var n = 1; n <= nSingular; n++) {
+                                var s = 1.0 / Math.pow(n, decayPow);
+                                singVals.push(s);
+                                sumS += s;
+                                sumS2 += s * s;
+                                if (s > maxS) maxS = s;
+                            }
+
+                            var barW = Math.min(plotW / nSingular * 0.75, 20);
+                            var gap = (plotW - barW * nSingular) / (nSingular + 1);
+
+                            for (var i = 0; i < singVals.length; i++) {
+                                var bh = (singVals[i] / maxS) * plotH * 0.85;
+                                var bx = pad.left + gap + i * (barW + gap);
+                                var by = pad.top + plotH - bh;
+                                var color;
+                                if (decayPow > 1.0) color = viz.colors.teal;
+                                else if (decayPow > 0.5) color = viz.colors.blue;
+                                else color = viz.colors.orange;
+                                ctx.fillStyle = color + 'cc';
+                                ctx.fillRect(bx, by, barW, bh);
+                            }
+
+                            ctx.fillStyle = viz.colors.white;
+                            ctx.font = '12px -apple-system,sans-serif';
+                            ctx.textAlign = 'center';
+                            ctx.fillText('n (singular value index)', pad.left + plotW / 2, viz.height - 8);
+                            ctx.save();
+                            ctx.translate(18, pad.top + plotH / 2);
+                            ctx.rotate(-Math.PI / 2);
+                            ctx.fillText('s_n(T)', 0, 0);
+                            ctx.restore();
+
+                            var infoY = 15;
+                            ctx.font = 'bold 12px -apple-system,sans-serif';
+                            ctx.textAlign = 'left';
+
+                            ctx.fillStyle = decayPow > 1 ? viz.colors.green : viz.colors.red;
+                            ctx.fillText('Trace class (S1): sum s_n = ' + sumS.toFixed(2) + (decayPow > 1 ? ' (converges)' : ' (diverges for large N)'), pad.left, infoY);
+                            infoY += 16;
+                            ctx.fillStyle = decayPow > 0.5 ? viz.colors.green : viz.colors.red;
+                            ctx.fillText('Hilbert-Schmidt (S2): sum s_n^2 = ' + sumS2.toFixed(2) + (decayPow > 0.5 ? ' (converges)' : ' (diverges for large N)'), pad.left, infoY);
+                            infoY += 16;
+                            ctx.fillStyle = viz.colors.green;
+                            ctx.fillText('Compact: s_n -> 0 (always, since p > 0)', pad.left, infoY);
+
+                            ctx.fillStyle = viz.colors.text;
+                            ctx.font = '11px -apple-system,sans-serif';
+                            infoY += 20;
+                            ctx.fillText('p > 1: trace class | p > 1/2: HS | p > 0: compact', pad.left, infoY);
+                        }
+                        draw();
+                    }
+                },
+                {
+                    id: 'norm-comparison-viz',
+                    title: 'Operator Norm vs HS Norm vs Trace Norm',
+                    description: 'Compare three norms as singular value decay varies',
+                    setup: function(container, controls) {
+                        var viz = new VizEngine(container, {width: 560, height: 380, scale: 40});
+
+                        var nTerms = 15;
+                        VizEngine.createSlider(controls, 'Num terms', 3, 30, nTerms, 1, function(v) { nTerms = Math.round(v); draw(); });
+
+                        function draw() {
+                            viz.clear();
+                            var ctx = viz.ctx;
+                            var pad = {left: 70, right: 30, top: 40, bottom: 50};
+                            var plotW = viz.width - pad.left - pad.right;
+                            var plotH = viz.height - pad.top - pad.bottom;
+
+                            ctx.strokeStyle = viz.colors.axis;
+                            ctx.lineWidth = 1.5;
+                            ctx.beginPath();
+                            ctx.moveTo(pad.left, pad.top);
+                            ctx.lineTo(pad.left, pad.top + plotH);
+                            ctx.lineTo(pad.left + plotW, pad.top + plotH);
+                            ctx.stroke();
+
+                            var pValues = [];
+                            var opNorms = [];
+                            var hsNorms = [];
+                            var trNorms = [];
+                            var steps = 50;
+
+                            for (var step = 0; step <= steps; step++) {
+                                var p = 0.3 + step * 2.7 / steps;
+                                pValues.push(p);
+                                var opN = 1.0;
+                                var hsN = 0;
+                                var trN = 0;
+                                for (var n = 1; n <= nTerms; n++) {
+                                    var s = 1.0 / Math.pow(n, p);
+                                    hsN += s * s;
+                                    trN += s;
+                                }
+                                opNorms.push(opN);
+                                hsNorms.push(Math.sqrt(hsN));
+                                trNorms.push(trN);
+                            }
+
+                            var maxVal = 0;
+                            for (var k = 0; k < trNorms.length; k++) {
+                                if (trNorms[k] > maxVal) maxVal = trNorms[k];
+                            }
+                            if (maxVal < 2) maxVal = 2;
+
+                            function drawCurve(vals, color) {
+                                ctx.strokeStyle = color;
+                                ctx.lineWidth = 2;
+                                ctx.beginPath();
+                                for (var i = 0; i < vals.length; i++) {
+                                    var px = pad.left + (i / steps) * plotW;
+                                    var py = pad.top + plotH - (Math.min(vals[i], maxVal) / maxVal) * plotH * 0.9;
+                                    if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+                                }
+                                ctx.stroke();
+                            }
+
+                            drawCurve(trNorms, viz.colors.red);
+                            drawCurve(hsNorms, viz.colors.blue);
+                            drawCurve(opNorms, viz.colors.green);
+
+                            ctx.fillStyle = viz.colors.white;
+                            ctx.font = '12px -apple-system,sans-serif';
+                            ctx.textAlign = 'center';
+                            ctx.fillText('Decay exponent p (s_n = 1/n^p)', pad.left + plotW / 2, viz.height - 8);
+                            ctx.save();
+                            ctx.translate(18, pad.top + plotH / 2);
+                            ctx.rotate(-Math.PI / 2);
+                            ctx.fillText('Norm value', 0, 0);
+                            ctx.restore();
+
+                            var legY = pad.top + 10;
+                            ctx.font = '11px -apple-system,sans-serif';
+                            ctx.textAlign = 'left';
+                            ctx.fillStyle = viz.colors.red;
+                            ctx.fillText('||T||_1 (trace)', pad.left + plotW - 120, legY);
+                            ctx.fillStyle = viz.colors.blue;
+                            ctx.fillText('||T||_HS', pad.left + plotW - 120, legY + 14);
+                            ctx.fillStyle = viz.colors.green;
+                            ctx.fillText('||T|| (operator)', pad.left + plotW - 120, legY + 28);
+
+                            ctx.fillStyle = viz.colors.text;
+                            ctx.font = '9px -apple-system,sans-serif';
+                            ctx.textAlign = 'center';
+                            for (var tick = 0; tick <= 5; tick++) {
+                                var pTick = 0.3 + tick * 2.7 / 5;
+                                var tx = pad.left + (tick / 5) * plotW;
+                                ctx.fillText(pTick.toFixed(1), tx, pad.top + plotH + 14);
+                            }
+                        }
+                        draw();
+                    }
+                }
+            ],
+            exercises: [
+                {
+                    id: 'ch16-ex10',
+                    type: 'proof',
+                    difficulty: 3,
+                    question: 'Show that the Hilbert-Schmidt norm is independent of the choice of orthonormal basis.',
+                    hint: 'Use Parseval\'s identity to express \\\\(\\\\sum_i \\\\|Te_i\\\\|^2\\\\) in terms of a second basis \\\\(\\\\{f_j\\\\}\\\\).',
+                    solution: 'Let \\\\(\\\\{e_i\\\\}\\\\) and \\\\(\\\\{f_j\\\\}\\\\) be ONBs. Then \\\\(\\\\sum_i \\\\|Te_i\\\\|^2 = \\\\sum_i \\\\sum_j |\\\\langle Te_i, f_j\\\\rangle|^2 = \\\\sum_j \\\\sum_i |\\\\langle e_i, T^*f_j\\\\rangle|^2 = \\\\sum_j \\\\|T^*f_j\\\\|^2\\\\). By the same argument with \\\\(T^*\\\\) in place of \\\\(T\\\\), this also equals \\\\(\\\\sum_j \\\\|Tf_j\\\\|^2\\\\). Hence the sum is basis-independent.'
+                },
+                {
+                    id: 'ch16-ex11',
+                    type: 'proof',
+                    difficulty: 4,
+                    question: 'Prove that every Hilbert-Schmidt operator is compact.',
+                    hint: 'Approximate T by finite-rank operators T_N and show ||T - T_N||_{HS} -> 0.',
+                    solution: 'Define \\\\(T_N x = \\\\sum_{i=1}^N \\\\langle x, e_i \\\\rangle Te_i\\\\). Each \\\\(T_N\\\\) is finite-rank (hence compact). We have \\\\(\\\\|T - T_N\\\\|^2 \\\\leq \\\\|T - T_N\\\\|_{\\\\mathrm{HS}}^2 = \\\\sum_{i > N} \\\\|Te_i\\\\|^2 \\\\to 0\\\\) as \\\\(N \\\\to \\\\infty\\\\), since the full series converges. Thus \\\\(T\\\\) is a norm limit of finite-rank operators, hence compact.'
+                },
+                {
+                    id: 'ch16-ex12',
+                    type: 'computation',
+                    difficulty: 3,
+                    question: 'Compute the Hilbert-Schmidt norm of the integral operator \\\\((Kf)(x) = \\\\int_0^1 xy\\, f(y)\\,dy\\\\) on \\\\(L^2[0,1]\\\\).',
+                    hint: 'Use the formula \\\\(\\\\|K\\\\|_{\\\\mathrm{HS}}^2 = \\\\int_0^1 \\\\int_0^1 |k(x,y)|^2\\,dx\\,dy\\\\) with \\\\(k(x,y) = xy\\\\).',
+                    solution: '\\\\(\\\\|K\\\\|_{\\\\mathrm{HS}}^2 = \\\\int_0^1 \\\\int_0^1 (xy)^2\\,dx\\,dy = \\\\int_0^1 x^2\\,dx \\\\cdot \\\\int_0^1 y^2\\,dy = \\\\frac{1}{3} \\\\cdot \\\\frac{1}{3} = \\\\frac{1}{9}\\\\). So \\\\(\\\\|K\\\\|_{\\\\mathrm{HS}} = 1/3\\\\). This operator is rank-1 with eigenvalue \\\\(1/3\\\\) (eigenvector \\\\(f(x) = \\\\sqrt{3}\\,x\\\\)) and is both trace class and Hilbert-Schmidt.'
+                }
+            ]
+        },
+        // ===== Section 5: Applications: Sturm-Liouville =====
+        {
+            id: 'ch16-sec05',
+            title: 'Applications: Sturm-Liouville Problems',
+            content: `
+                <h2>Applications: Sturm-Liouville Problems</h2>
+
+                <div class="env-block intuition">
+                    <div class="env-title">Intuition</div>
+                    <div class="env-body">
+                        <p>Sturm-Liouville theory connects differential equations to spectral theory. The key idea: invert a differential operator using its Green's function to obtain a compact self-adjoint integral operator, then apply the spectral theorem. This yields eigenfunction expansions that generalize Fourier series and are fundamental in mathematical physics.</p>
+                    </div>
+                </div>
+
+                <div class="env-block definition">
+                    <div class="env-title">Definition 16.18 (Regular Sturm-Liouville Problem)</div>
+                    <div class="env-body">
+                        <p>A <strong>regular Sturm-Liouville problem</strong> on \\\\([a, b]\\\\) consists of finding \\\\(\\\\lambda \\\\in \\\\mathbb{R}\\\\) and nontrivial \\\\(u\\\\) satisfying:</p>
+                        \\\\[-(p(x) u')' + q(x) u = \\\\lambda w(x) u, \\\\quad x \\\\in (a, b),\\\\]
+                        <p>with boundary conditions (e.g., \\\\(u(a) = u(b) = 0\\\\)), where \\\\(p > 0\\\\), \\\\(p \\\\in C^1\\\\), \\\\(q\\\\) is continuous, and the weight \\\\(w > 0\\\\) is continuous.</p>
+                    </div>
+                </div>
+
+                <div class="env-block definition">
+                    <div class="env-title">Definition 16.19 (Green's Function)</div>
+                    <div class="env-body">
+                        <p>The <strong>Green's function</strong> \\\\(G(x,t)\\\\) for the Sturm-Liouville operator \\\\(L = -(pu')' + qu\\\\) with homogeneous boundary conditions is the kernel of the integral operator \\\\(L^{-1}\\\\):</p>
+                        \\\\[u(x) = (L^{-1}f)(x) = \\\\int_a^b G(x,t) f(t)\\,dt.\\\\]
+                        <p>For \\\\(-u'' = f\\\\) on \\\\([0,1]\\\\) with \\\\(u(0) = u(1) = 0\\\\), the Green's function is</p>
+                        \\\\[G(x,t) = \\\\begin{cases} t(1-x) & \\\\text{if } t \\\\leq x, \\\\\\\\ x(1-t) & \\\\text{if } t > x. \\\\end{cases}\\\\]
+                    </div>
+                </div>
+
+                <div class="env-block theorem">
+                    <div class="env-title">Theorem 16.20 (Compact Resolvent)</div>
+                    <div class="env-body">
+                        <p>For a regular Sturm-Liouville problem, the resolvent operator \\\\(L^{-1}\\\\) (defined via the Green's function) is a compact self-adjoint operator on \\\\(L^2_w(a,b)\\\\) (the weighted \\\\(L^2\\\\) space). Consequently:</p>
+                        <ol>
+                            <li>The eigenvalues \\\\(\\\\{\\\\lambda_n\\\\}\\\\) of \\\\(L\\\\) are real, \\\\(\\\\lambda_n \\\\to \\\\infty\\\\), and each has finite multiplicity.</li>
+                            <li>The eigenfunctions \\\\(\\\\{\\\\phi_n\\\\}\\\\) form a complete orthonormal system in \\\\(L^2_w(a,b)\\\\).</li>
+                            <li>Every \\\\(f \\\\in L^2_w(a,b)\\\\) has the eigenfunction expansion \\\\(f = \\\\sum_n \\\\langle f, \\\\phi_n \\\\rangle_w \\\\phi_n\\\\).</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="env-block proof">
+                    <div class="env-title">Proof (Sketch)</div>
+                    <div class="env-body">
+                        <p>The eigenvalue problem \\\\(Lu = \\\\lambda u\\\\) is equivalent to \\\\(L^{-1}u = (1/\\\\lambda) u\\\\). Since \\\\(G(x,t)\\\\) is continuous (hence square-integrable) on \\\\([a,b]^2\\\\), the operator \\\\(L^{-1}\\\\) is Hilbert-Schmidt, hence compact. Self-adjointness follows from the symmetry \\\\(G(x,t) = G(t,x)\\\\). The spectral theorem for compact self-adjoint operators then yields the stated conclusions, with \\\\(\\\\lambda_n = 1/\\\\mu_n\\\\) where \\\\(\\\\mu_n \\\\to 0\\\\) are the eigenvalues of \\\\(L^{-1}\\\\).</p>
+                        <div class="qed">∎</div>
+                    </div>
+                </div>
+
+                <div class="env-block example">
+                    <div class="env-title">Example 16.21 (Vibrating String)</div>
+                    <div class="env-body">
+                        <p>Consider \\\\(-u'' = \\\\lambda u\\\\) on \\\\([0, \\\\pi]\\\\) with \\\\(u(0) = u(\\\\pi) = 0\\\\). The eigenvalues and eigenfunctions are:</p>
+                        \\\\[\\\\lambda_n = n^2, \\\\quad \\\\phi_n(x) = \\\\sqrt{\\\\frac{2}{\\\\pi}} \\\\sin(nx), \\\\quad n = 1, 2, 3, \\\\ldots\\\\]
+                        <p>The completeness of \\\\(\\\\{\\\\sin(nx)\\\\}\\\\) in \\\\(L^2[0,\\\\pi]\\\\) (the foundation of Fourier sine series) is a consequence of the spectral theorem for the compact resolvent operator.</p>
+                    </div>
+                </div>
+
+                <div class="env-block example">
+                    <div class="env-title">Example 16.22 (Bessel's Equation)</div>
+                    <div class="env-body">
+                        <p>The singular Sturm-Liouville problem</p>
+                        \\\\[-(xu')' + \\\\frac{\\\\nu^2}{x} u = \\\\lambda x u, \\\\quad x \\\\in (0, 1), \\\\quad u(1) = 0, \\\\quad u \\\\text{ bounded at } 0,\\\\]
+                        <p>has eigenvalues \\\\(\\\\lambda_{n,\\\\nu} = j_{\\\\nu,n}^2\\\\) where \\\\(j_{\\\\nu,n}\\\\) is the \\\\(n\\\\)-th zero of the Bessel function \\\\(J_\\\\nu\\\\). The eigenfunctions \\\\(J_\\\\nu(j_{\\\\nu,n} x)\\\\) form a complete orthogonal system in \\\\(L^2_x(0,1)\\\\).</p>
+                    </div>
+                </div>
+
+                <p>The following visualization shows the eigenfunctions of \\\\(-u'' = \\\\lambda u\\\\) on \\\\([0, \\\\pi]\\\\) with Dirichlet boundary conditions.</p>
+
+                <div class="viz-placeholder" data-viz="sturm-liouville-eigenfunctions-viz"></div>
+
+                <p>The next visualization shows the Green's function \\\\(G(x,t)\\\\) and its eigenfunction expansion convergence.</p>
+
+                <div class="viz-placeholder" data-viz="greens-function-viz"></div>
+            `,
+            visualizations: [
+                {
+                    id: 'sturm-liouville-eigenfunctions-viz',
+                    title: 'Eigenfunctions of -u\'\' = lambda u',
+                    description: 'Visualize the first several eigenfunctions and eigenvalues',
+                    setup: function(container, controls) {
+                        var viz = new VizEngine(container, {width: 560, height: 440, scale: 40});
+
+                        var nModes = 4;
+                        var showSum = false;
+                        var coeffs = [1.0, 0.5, 0.3, 0.2, 0.15, 0.1, 0.08, 0.05];
+
+                        VizEngine.createSlider(controls, 'Modes shown', 1, 8, nModes, 1, function(v) { nModes = Math.round(v); draw(); });
+                        VizEngine.createButton(controls, 'Toggle partial sum', function() { showSum = !showSum; draw(); });
+
+                        function draw() {
+                            viz.clear();
+                            var ctx = viz.ctx;
+                            var pad = {left: 50, right: 20, top: 30, bottom: 45};
+                            var plotW = viz.width - pad.left - pad.right;
+                            var plotH = viz.height - pad.top - pad.bottom;
+
+                            ctx.strokeStyle = viz.colors.axis;
+                            ctx.lineWidth = 1.5;
+                            ctx.beginPath();
+                            ctx.moveTo(pad.left, pad.top + plotH / 2);
+                            ctx.lineTo(pad.left + plotW, pad.top + plotH / 2);
+                            ctx.stroke();
+                            ctx.beginPath();
+                            ctx.moveTo(pad.left, pad.top);
+                            ctx.lineTo(pad.left, pad.top + plotH);
+                            ctx.stroke();
+
+                            ctx.fillStyle = viz.colors.text;
+                            ctx.font = '10px -apple-system,sans-serif';
+                            ctx.textAlign = 'center';
+                            ctx.fillText('0', pad.left - 8, pad.top + plotH / 2 + 4);
+                            ctx.fillText('pi', pad.left + plotW, pad.top + plotH / 2 + 14);
+
+                            var modeColors = [viz.colors.blue, viz.colors.teal, viz.colors.orange, viz.colors.purple, viz.colors.red, viz.colors.green, viz.colors.yellow, viz.colors.pink];
+                            var steps = 200;
+                            var maxAmp = 1.2;
+
+                            for (var mode = 1; mode <= nModes; mode++) {
+                                ctx.strokeStyle = modeColors[(mode - 1) % modeColors.length];
+                                ctx.lineWidth = 2;
+                                ctx.beginPath();
+                                for (var i = 0; i <= steps; i++) {
+                                    var x = i * Math.PI / steps;
+                                    var y = Math.sin(mode * x);
+                                    var px = pad.left + (i / steps) * plotW;
+                                    var py = pad.top + plotH / 2 - (y / maxAmp) * (plotH / 2) * 0.85;
+                                    if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+                                }
+                                ctx.stroke();
+                            }
+
+                            if (showSum) {
+                                ctx.strokeStyle = viz.colors.white;
+                                ctx.lineWidth = 2.5;
+                                ctx.beginPath();
+                                for (var si = 0; si <= steps; si++) {
+                                    var sx = si * Math.PI / steps;
+                                    var sy = 0;
+                                    for (var m = 1; m <= nModes; m++) {
+                                        sy += coeffs[m - 1] * Math.sin(m * sx);
+                                    }
+                                    var spx = pad.left + (si / steps) * plotW;
+                                    var spy = pad.top + plotH / 2 - (sy / maxAmp) * (plotH / 2) * 0.85;
+                                    if (si === 0) ctx.moveTo(spx, spy); else ctx.lineTo(spx, spy);
+                                }
+                                ctx.stroke();
+                            }
+
+                            ctx.font = '11px -apple-system,sans-serif';
+                            ctx.textAlign = 'left';
+                            for (var l = 0; l < nModes; l++) {
+                                ctx.fillStyle = modeColors[l % modeColors.length];
+                                var lx = pad.left + 10 + (l % 4) * 120;
+                                var ly = viz.height - 30 + Math.floor(l / 4) * 14;
+                                ctx.fillText('n=' + (l + 1) + ': l=' + ((l + 1) * (l + 1)), lx, ly);
+                            }
+
+                            ctx.fillStyle = viz.colors.white;
+                            ctx.font = '12px -apple-system,sans-serif';
+                            ctx.textAlign = 'center';
+                            ctx.fillText('x', pad.left + plotW / 2, viz.height - 5);
+                        }
+                        draw();
+                    }
+                },
+                {
+                    id: 'greens-function-viz',
+                    title: 'Green\'s Function and Eigenfunction Expansion',
+                    description: 'Visualize the Green\'s function G(x,t) for -u\'\' with Dirichlet BC and its spectral decomposition',
+                    setup: function(container, controls) {
+                        var viz = new VizEngine(container, {width: 560, height: 440, scale: 40});
+
+                        var tFixed = 0.5;
+                        var nTerms = 5;
+
+                        VizEngine.createSlider(controls, 't (source point)', 0.05, 0.95, tFixed, 0.05, function(v) { tFixed = v; draw(); });
+                        VizEngine.createSlider(controls, 'Expansion terms N', 1, 20, nTerms, 1, function(v) { nTerms = Math.round(v); draw(); });
+
+                        function draw() {
+                            viz.clear();
+                            var ctx = viz.ctx;
+                            var pad = {left: 50, right: 20, top: 40, bottom: 45};
+                            var plotW = viz.width - pad.left - pad.right;
+                            var plotH = viz.height - pad.top - pad.bottom;
+
+                            ctx.strokeStyle = viz.colors.axis;
+                            ctx.lineWidth = 1.5;
+                            ctx.beginPath();
+                            ctx.moveTo(pad.left, pad.top + plotH);
+                            ctx.lineTo(pad.left + plotW, pad.top + plotH);
+                            ctx.stroke();
+                            ctx.beginPath();
+                            ctx.moveTo(pad.left, pad.top);
+                            ctx.lineTo(pad.left, pad.top + plotH);
+                            ctx.stroke();
+
+                            var steps = 200;
+                            var maxG = 0.25;
+
+                            ctx.strokeStyle = viz.colors.white;
+                            ctx.lineWidth = 2.5;
+                            ctx.beginPath();
+                            for (var i = 0; i <= steps; i++) {
+                                var x = i / steps;
+                                var g;
+                                if (x <= tFixed) {
+                                    g = x * (1 - tFixed);
+                                } else {
+                                    g = tFixed * (1 - x);
+                                }
+                                var px = pad.left + (i / steps) * plotW;
+                                var py = pad.top + plotH - (g / maxG) * plotH * 0.85;
+                                if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+                            }
+                            ctx.stroke();
+
+                            ctx.strokeStyle = viz.colors.teal;
+                            ctx.lineWidth = 2;
+                            ctx.setLineDash([6, 3]);
+                            ctx.beginPath();
+                            for (var j = 0; j <= steps; j++) {
+                                var xj = j / steps;
+                                var gApprox = 0;
+                                for (var n = 1; n <= nTerms; n++) {
+                                    var lam = n * n * Math.PI * Math.PI;
+                                    gApprox += (2 / Math.PI) * Math.sin(n * Math.PI * xj) * Math.sin(n * Math.PI * tFixed) / lam;
+                                }
+                                var pjx = pad.left + (j / steps) * plotW;
+                                var pjy = pad.top + plotH - (gApprox / maxG) * plotH * 0.85;
+                                if (j === 0) ctx.moveTo(pjx, pjy); else ctx.lineTo(pjx, pjy);
+                            }
+                            ctx.stroke();
+                            ctx.setLineDash([]);
+
+                            var tPx = pad.left + tFixed * plotW;
+                            ctx.strokeStyle = viz.colors.orange;
+                            ctx.lineWidth = 1;
+                            ctx.setLineDash([3, 3]);
+                            ctx.beginPath();
+                            ctx.moveTo(tPx, pad.top);
+                            ctx.lineTo(tPx, pad.top + plotH);
+                            ctx.stroke();
+                            ctx.setLineDash([]);
+                            ctx.fillStyle = viz.colors.orange;
+                            ctx.font = '11px -apple-system,sans-serif';
+                            ctx.textAlign = 'center';
+                            ctx.fillText('t = ' + tFixed.toFixed(2), tPx, pad.top - 5);
+
+                            ctx.font = '11px -apple-system,sans-serif';
+                            ctx.textAlign = 'left';
+                            ctx.fillStyle = viz.colors.white;
+                            ctx.fillText('G(x,t) exact', pad.left + 10, pad.top + 15);
+                            ctx.fillStyle = viz.colors.teal;
+                            ctx.fillText('N=' + nTerms + ' term approx', pad.left + 10, pad.top + 30);
+
+                            var gExact = tFixed * (1 - tFixed);
+                            var gApproxAtT = 0;
+                            for (var na = 1; na <= nTerms; na++) {
+                                gApproxAtT += (2 / Math.PI) * Math.sin(na * Math.PI * tFixed) * Math.sin(na * Math.PI * tFixed) / (na * na * Math.PI * Math.PI);
+                            }
+                            var err = Math.abs(gExact - gApproxAtT);
+                            ctx.fillStyle = viz.colors.text;
+                            ctx.fillText('Max error at t: ' + err.toExponential(2), pad.left + 10, pad.top + 48);
+
+                            ctx.fillStyle = viz.colors.white;
+                            ctx.font = '12px -apple-system,sans-serif';
+                            ctx.textAlign = 'center';
+                            ctx.fillText('x', pad.left + plotW / 2, viz.height - 8);
+                            ctx.save();
+                            ctx.translate(15, pad.top + plotH / 2);
+                            ctx.rotate(-Math.PI / 2);
+                            ctx.fillText('G(x,t)', 0, 0);
+                            ctx.restore();
+
+                            ctx.fillStyle = viz.colors.text;
+                            ctx.font = '10px -apple-system,sans-serif';
+                            ctx.textAlign = 'center';
+                            ctx.fillText('0', pad.left, pad.top + plotH + 14);
+                            ctx.fillText('1', pad.left + plotW, pad.top + plotH + 14);
+                        }
+                        draw();
+                    }
+                }
+            ],
+            exercises: [
+                {
+                    id: 'ch16-ex13',
+                    type: 'computation',
+                    difficulty: 3,
+                    question: 'Solve the Sturm-Liouville problem \\\\(-u\'\' = \\\\lambda u\\\\) on \\\\([0, \\\\pi]\\\\) with \\\\(u(0) = u(\\\\pi) = 0\\\\). Find all eigenvalues and eigenfunctions.',
+                    hint: 'The general solution of \\\\(u\'\' + \\\\lambda u = 0\\\\) depends on the sign of \\\\(\\\\lambda\\\\). Show that \\\\(\\\\lambda > 0\\\\) is required.',
+                    solution: 'For \\\\(\\\\lambda > 0\\\\), write \\\\(\\\\lambda = \\\\mu^2\\\\). The general solution is \\\\(u = A\\\\cos(\\\\mu x) + B\\\\sin(\\\\mu x)\\\\). BC \\\\(u(0) = 0\\\\) gives \\\\(A = 0\\\\). BC \\\\(u(\\\\pi) = 0\\\\) gives \\\\(B\\\\sin(\\\\mu\\\\pi) = 0\\\\), so \\\\(\\\\mu = n\\\\) for \\\\(n \\\\in \\\\mathbb{N}\\\\). Thus \\\\(\\\\lambda_n = n^2\\\\), \\\\(\\\\phi_n(x) = \\\\sin(nx)\\\\). For \\\\(\\\\lambda \\\\leq 0\\\\), only the trivial solution exists.'
+                },
+                {
+                    id: 'ch16-ex14',
+                    type: 'proof',
+                    difficulty: 4,
+                    question: 'Verify that the Green\'s function \\\\(G(x,t) = \\\\begin{cases} t(1-x) & t \\\\leq x \\\\\\\\ x(1-t) & t > x \\\\end{cases}\\\\) satisfies \\\\(-G_{xx} = \\\\delta(x-t)\\\\) with \\\\(G(0,t) = G(1,t) = 0\\\\).',
+                    hint: 'Check: (1) boundary conditions, (2) continuity at x=t, (3) jump in derivative at x=t.',
+                    solution: 'BCs: \\\\(G(0,t) = 0 \\\\cdot (1-t) = 0\\\\), \\\\(G(1,t) = t \\\\cdot 0 = 0\\\\). Continuity at \\\\(x=t\\\\): both sides give \\\\(t(1-t)\\\\). For \\\\(x < t\\\\): \\\\(G_x = 1-t\\\\); for \\\\(x > t\\\\): \\\\(G_x = -t\\\\). Jump: \\\\(G_x(t^+) - G_x(t^-) = -t - (1-t) = -1\\\\). So \\\\(-G_{xx} = \\\\delta(x-t)\\\\) in the distributional sense.'
+                },
+                {
+                    id: 'ch16-ex15',
+                    type: 'proof',
+                    difficulty: 5,
+                    question: 'Let \\\\(L = -d^2/dx^2\\\\) on \\\\([0,1]\\\\) with Dirichlet boundary conditions. Show that the resolvent \\\\(L^{-1}\\\\) is a Hilbert-Schmidt operator and compute its Hilbert-Schmidt norm.',
+                    hint: 'Use \\\\(\\\\|L^{-1}\\\\|_{HS}^2 = \\\\int_0^1 \\\\int_0^1 |G(x,t)|^2\\,dx\\,dt\\\\) and split the integral at \\\\(x=t\\\\).',
+                    solution: '\\\\(\\\\|L^{-1}\\\\|_{\\\\mathrm{HS}}^2 = \\\\int_0^1 \\\\int_0^1 G(x,t)^2\\,dx\\,dt\\\\). Split: \\\\(\\\\int_0^1 [\\\\int_0^x t^2(1-x)^2\\,dt + \\\\int_x^1 x^2(1-t)^2\\,dt]\\,dx\\\\). The first integral is \\\\((1-x)^2 x^3/3\\\\), the second is \\\\(x^2(1-x)^3/3\\\\). Sum: \\\\(\\\\frac{x^2(1-x)^2}{3}[x + 1-x] = \\\\frac{x^2(1-x)^2}{3}\\\\). Integrating: \\\\(\\\\frac{1}{3}\\\\int_0^1 x^2(1-x)^2\\,dx = \\\\frac{1}{3} \\\\cdot \\\\frac{1}{30} = \\\\frac{1}{90}\\\\). So \\\\(\\\\|L^{-1}\\\\|_{\\\\mathrm{HS}} = 1/\\\\sqrt{90}\\\\). This equals \\\\(\\\\sqrt{\\\\sum 1/(n^4\\\\pi^4)} = 1/\\\\sqrt{90}\\\\), consistent with \\\\(\\\\zeta(4) = \\\\pi^4/90\\\\).'
+                }
+            ]
+        }
     ]
 });
