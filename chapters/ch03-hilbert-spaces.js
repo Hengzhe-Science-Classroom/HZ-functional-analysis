@@ -10,6 +10,14 @@ window.CHAPTERS.push({
             id: 'inner-products',
             title: 'Inner Products',
             content: `
+<div class="bridge-block chapter-opening">
+<p><strong>From Banach Spaces to Hilbert Spaces.</strong> In Chapter 2, we studied Banach spaces, where completeness made limits reliable. Yet Banach spaces, in general, have no notion of angle or orthogonality. This chapter introduces inner product spaces, where a richer structure, the inner product, gives us angles, orthogonality, and the geometry of projection. When an inner product space is complete, we obtain a Hilbert space, the infinite-dimensional analog of Euclidean space and the most well-behaved setting in all of functional analysis.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define inner products axiomatically, derive the Cauchy-Schwarz inequality (the single most important inequality in the subject), and show how every inner product induces a norm. We also prove the parallelogram law, which characterizes norms coming from inner products.</p>
+</div>
+
                 <h2>Inner Product Spaces</h2>
 
                 <p>An inner product endows a vector space with geometric structure: lengths, angles, and orthogonality. This section develops the algebraic foundations and the fundamental inequalities that govern inner product spaces.</p>
@@ -252,6 +260,14 @@ window.CHAPTERS.push({
             id: 'hilbert-spaces',
             title: 'Hilbert Spaces',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Adding Completeness to Geometry.</strong> An inner product space has angles and orthogonality but may still have "gaps." When we add completeness, we get a Hilbert space, the setting where projection, approximation, and Fourier theory work flawlessly. The extra geometric structure makes Hilbert spaces much more tractable than general Banach spaces.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define Hilbert spaces, survey the major examples (\(\ell^2\), \(L^2\)), prove the closest-point theorem for closed convex sets, and establish the Projection Theorem, the cornerstone result that will drive Chapter 4.</p>
+</div>
+
                 <h2>Hilbert Spaces</h2>
 
                 <p>A Hilbert space is an inner product space that is complete with respect to the induced norm. These are the natural infinite-dimensional generalization of Euclidean space and are central to quantum mechanics, signal processing, and PDE theory.</p>
@@ -491,6 +507,14 @@ window.CHAPTERS.push({
             id: 'orthonormal-systems',
             title: 'Orthonormal Systems',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>From Geometry to Coordinates.</strong> The Projection Theorem tells us we can decompose vectors relative to subspaces. But to do this systematically, we need a well-organized "coordinate system," an orthonormal set. This section develops the theory of orthonormal systems that parallels (and generalizes) the standard basis in \(\mathbb{R}^n\).</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define orthonormal sets, introduce Gram-Schmidt orthogonalization, prove Bessel's inequality, and study Parseval's identity. These tools quantify how well a vector can be approximated by its projections onto orthonormal directions.</p>
+</div>
+
                 <h2>Orthonormal Systems</h2>
 
                 <p>Orthonormal sets bring the power of coordinate systems to infinite-dimensional spaces. The Gram&ndash;Schmidt process constructs them, and Bessel's inequality controls the size of Fourier coefficients.</p>
@@ -787,6 +811,14 @@ window.CHAPTERS.push({
             id: 'orthonormal-bases',
             title: 'Orthonormal Bases',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>From Systems to Bases.</strong> An orthonormal system may capture only part of the space. When it captures <em>everything</em>, in the sense that every element has a convergent expansion, we have an orthonormal basis. This is the infinite-dimensional generalization of a coordinate system, and it is the foundation of Fourier analysis.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define orthonormal bases (complete orthonormal systems), prove equivalent characterizations, and show that every separable Hilbert space is isometrically isomorphic to \(\ell^2\). This structural theorem reveals that there is essentially only one separable Hilbert space.</p>
+</div>
+
                 <h2>Orthonormal Bases</h2>
 
                 <p>An orthonormal basis (ONB) for a Hilbert space is an orthonormal set that is maximal&mdash;or equivalently, one whose span is dense. The existence of an ONB and Parseval's identity transform abstract Hilbert spaces into concrete sequence spaces.</p>
@@ -1093,6 +1125,18 @@ window.CHAPTERS.push({
             id: 'riesz-representation',
             title: 'Riesz Representation Theorem',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Functionals as Inner Products.</strong> Having understood the internal geometry of Hilbert spaces, we now ask: what do the continuous linear functionals on a Hilbert space look like? The Riesz Representation Theorem gives a strikingly clean answer: every continuous linear functional is just an inner product with a fixed element. This is one of the most elegant results in all of analysis.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We state and prove the Riesz Representation Theorem, showing that \(H^* \cong H\). We explore its consequences for duality and use it to motivate the general dual space theory of Chapter 10.</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Looking Ahead.</strong> The Riesz Representation Theorem tells us Hilbert spaces are self-dual, a remarkable simplification. In Chapter 4, we deepen the geometric story by studying orthogonal complements and projections systematically, developing the decomposition techniques that underpin approximation theory and least-squares methods.</p>
+</div>
+
                 <h2>The Riesz Representation Theorem</h2>
 
                 <p>The Riesz representation theorem is one of the cornerstones of Hilbert space theory. It identifies the dual of a Hilbert space with the space itself, revealing a fundamental self-duality that distinguishes Hilbert spaces from general Banach spaces.</p>

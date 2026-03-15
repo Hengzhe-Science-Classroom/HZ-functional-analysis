@@ -10,6 +10,14 @@ window.CHAPTERS.push({
             id: 'ch16-sec01',
             title: 'Spectrum of an Operator',
             content: `
+<div class="bridge-block chapter-opening">
+<p><strong>Eigenvalues and Eigenvectors in Infinite Dimensions.</strong> In finite dimensions, the spectral theorem diagonalizes symmetric matrices. Chapter 15 showed that compact operators have a clean spectral structure. Now we develop the full spectral theory: defining the spectrum, resolvent, and spectral radius for general bounded operators, and then specializing to compact operators where the theory becomes particularly powerful.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define the spectrum \(\sigma(T)\) and its three parts (point, continuous, residual spectrum), introduce the resolvent operator \(R(\lambda, T) = (\lambda I - T)^{-1}\), and prove that the spectrum is always a nonempty compact subset of \(\mathbb{C}\).</p>
+</div>
+
                 <h2>Spectrum of an Operator</h2>
 
                 <div class="env-block intuition">
@@ -351,6 +359,14 @@ window.CHAPTERS.push({
             id: 'ch16-sec02',
             title: 'Spectral Properties of Compact Operators',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>How Compactness Constrains the Spectrum.</strong> For compact operators, the spectrum is dramatically simpler than for general operators: it is at most countable, every nonzero spectral value is an eigenvalue, and the only possible accumulation point is zero. This brings us close to the finite-dimensional picture.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove that the nonzero spectrum of a compact operator consists entirely of eigenvalues with finite multiplicities, that these eigenvalues form a sequence converging to zero (or are finite in number), and that the residual and continuous spectrum are empty away from zero.</p>
+</div>
+
                 <h2>Spectral Properties of Compact Operators</h2>
 
                 <div class="env-block intuition">
@@ -601,6 +617,14 @@ window.CHAPTERS.push({
             id: 'ch16-sec03',
             title: 'Spectral Theorem for Compact Self-Adjoint Operators',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>The Crown Jewel.</strong> For compact self-adjoint operators on a Hilbert space, we get the full spectral decomposition: \(Tx = \sum_n \lambda_n \langle x, e_n \rangle e_n\), where \(\{e_n\}\) are orthonormal eigenvectors and \(\lambda_n \to 0\). This is the infinite-dimensional generalization of diagonalizing a symmetric matrix.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove the spectral theorem for compact self-adjoint operators, construct the eigenvector expansion, and show that truncating the expansion gives the best rank-\(n\) approximation. We also discuss the min-max characterization of eigenvalues (Courant-Fischer).</p>
+</div>
+
                 <h2>Spectral Theorem for Compact Self-Adjoint Operators</h2>
 
                 <div class="env-block intuition">
@@ -878,6 +902,14 @@ window.CHAPTERS.push({
             id: 'ch16-sec04',
             title: 'Hilbert-Schmidt and Trace Class',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Quantifying Compactness.</strong> Not all compact operators are equally "compact." Hilbert-Schmidt and trace class operators are compact operators with additional summability conditions on their singular values. These classes form ideals with their own norms and have important applications in quantum mechanics and statistics.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define Hilbert-Schmidt and trace class operators, prove they are ideals in \(\mathcal{B}(H)\), establish the Hilbert-Schmidt norm and trace norm, and show that integral operators with \(L^2\) kernels are Hilbert-Schmidt.</p>
+</div>
+
                 <h2>Hilbert-Schmidt and Trace Class Operators</h2>
 
                 <div class="env-block intuition">
@@ -1185,6 +1217,18 @@ window.CHAPTERS.push({
             id: 'ch16-sec05',
             title: 'Applications: Sturm-Liouville Problems',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Spectral Theory for Differential Equations.</strong> Sturm-Liouville problems, eigenvalue problems for second-order differential operators, are the classical application of the spectral theorem for compact operators. By inverting the differential operator via a Green's function, we convert a differential eigenvalue problem into a compact operator eigenvalue problem.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We formulate Sturm-Liouville problems, construct the Green's function, apply the spectral theorem to obtain a complete orthonormal system of eigenfunctions, and prove eigenfunction expansion (generalized Fourier series) for \(L^2\) functions.</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Looking Ahead.</strong> The spectral theorem for compact operators is powerful but limited: it only handles compact operators. The last three chapters extend the theory. Chapter 17 develops Banach algebras and the Gelfand transform, Chapter 18 handles unbounded operators (essential for quantum mechanics), and Chapter 19 introduces distributions and Sobolev spaces.</p>
+</div>
+
                 <h2>Applications: Sturm-Liouville Problems</h2>
 
                 <div class="env-block intuition">

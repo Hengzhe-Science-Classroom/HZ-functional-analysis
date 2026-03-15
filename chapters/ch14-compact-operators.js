@@ -14,6 +14,14 @@ window.CHAPTERS.push({
       id: 'ch14-sec01',
       title: '1. Compact Operators',
       content: `
+<div class="bridge-block chapter-opening">
+<p><strong>Finite-Dimensional Behavior in Infinite Dimensions.</strong> Chapters 10-13 developed duality and \(L^p\) theory. Now we begin the final arc of the course (Chapters 14-19) with compact operators, the class of operators that behave most like matrices. A compact operator maps bounded sets to relatively compact sets, effectively "compressing" infinite-dimensional problems into something finite-dimensional. This is the key to spectral theory, Fredholm theory, and applications to integral equations and PDE.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define compact operators, prove equivalent characterizations (including sequential compactness of image of bounded sequences), and establish that finite-rank operators are compact. We also show that the identity operator is compact only in finite dimensions.</p>
+</div>
+
 <h2>Definition and Basic Properties</h2>
 
 <p>
@@ -349,6 +357,14 @@ These are the building blocks of all finite-rank operators:
       id: 'ch14-sec02',
       title: '2. Examples',
       content: `
+<div class="bridge-block section-bridge">
+<p><strong>Compact Operators in the Wild.</strong> The definition of compactness is clean, but recognizing compact operators in practice requires working through examples. Integral operators with nice kernels, diagonal operators with eigenvalues decaying to zero, and the Volterra operator are the prototypical examples.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove compactness for integral operators with \(L^2\) kernels, diagonal operators with eigenvalues tending to zero, and the Volterra operator. Each example illustrates a different mechanism by which compactness arises.</p>
+</div>
+
 <h2>Key Examples of Compact Operators</h2>
 
 <p>
@@ -755,6 +771,14 @@ with no convergent subsequences extracted from \\((Se_n)\\)).
       id: 'ch14-sec03',
       title: '3. Properties',
       content: `
+<div class="bridge-block section-bridge">
+<p><strong>Algebraic and Topological Structure.</strong> Compact operators form a closed two-sided ideal in \(\mathcal{B}(X)\): sums, scalar multiples, compositions with bounded operators, and norm limits of compact operators are all compact. This ideal property is fundamental for Fredholm theory in Chapter 15.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove the ideal property, show that norm limits of compact operators are compact, and establish that in Hilbert spaces, every compact operator is a norm limit of finite-rank operators (the approximation property).</p>
+</div>
+
 <h2>The Space of Compact Operators</h2>
 
 <p>
@@ -1046,6 +1070,14 @@ So \\(\\mathcal{K}(X)\\) is a <em>non-unital</em> ideal in \\(\\mathcal{B}(X)\\)
       id: 'ch14-sec04',
       title: '4. Hilbert Space Case',
       content: `
+<div class="bridge-block section-bridge">
+<p><strong>Preview of Spectral Theory.</strong> Compact operators have a remarkably well-behaved spectrum: every nonzero spectral value is an eigenvalue, eigenvalues can only accumulate at zero, and each nonzero eigenvalue has finite multiplicity. These properties bring us close to the finite-dimensional spectral theorem.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove the Riesz-Schauder theorem on the spectrum of compact operators, show that eigenspaces are finite-dimensional, and establish that the only possible accumulation point of eigenvalues is zero. These results are developed fully in Chapter 16.</p>
+</div>
+
 <h2>Compact Operators on Hilbert Spaces</h2>
 
 <p>
@@ -1458,6 +1490,18 @@ The approximation \\(D_N x = \\sum_{n=1}^N \\frac{1}{n} \\langle x, e_n \\rangle
       id: 'ch14-sec05',
       title: '5. Schauder\'s Theorem',
       content: `
+<div class="bridge-block section-bridge">
+<p><strong>Duality for Compact Operators.</strong> Schauder's theorem states that \(T\) is compact if and only if its adjoint \(T^*\) is compact. This is a deep connection between an operator and its dual, and it leads directly to the Fredholm alternative for compact perturbations of the identity.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove Schauder's theorem, preview the Fredholm alternative (\(I - T\) is injective iff surjective when \(T\) is compact), and connect these results to the solvability theory of integral equations in Chapter 15.</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Looking Ahead.</strong> Compact operators set the stage for two closely related theories. Chapter 15 develops Fredholm theory (index theory for compact perturbations of the identity), and Chapter 16 develops the full spectral theorem for compact self-adjoint operators on Hilbert spaces.</p>
+</div>
+
 <h2>Schauder's Theorem: Compactness of the Adjoint</h2>
 
 <p>

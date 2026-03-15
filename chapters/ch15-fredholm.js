@@ -9,7 +9,16 @@ window.CHAPTERS.push({
         {
             id: 'ch15-sec01',
             title: 'Fredholm Operators',
-            content: `<h2>Fredholm Operators</h2>
+            content: `
+<div class="bridge-block chapter-opening">
+<p><strong>Index Theory and Solvability.</strong> In Chapter 14, we studied compact operators and saw that they have finite-dimensional eigenspaces and nice spectral properties. Fredholm theory takes the next step: it studies operators of the form \(I - K\) (identity minus compact) and, more generally, operators with finite-dimensional kernel and cokernel. The <em>Fredholm index</em> is a topological invariant that controls solvability of equations, remaining stable under compact perturbations.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define Fredholm operators, their index \(\operatorname{ind}(T) = \dim \ker T - \dim \operatorname{coker} T\), and prove basic properties. The index is the key invariant: it is an integer that is stable under small perturbations and compact perturbations.</p>
+</div>
+
+<h2>Fredholm Operators</h2>
 <p>Fredholm operators are a distinguished class of bounded linear operators that behave, in many respects, like finite-dimensional linear maps. They arise naturally in the study of integral equations, differential equations, and index theory. The defining feature is that their "defects" — the kernel and cokernel — are finite-dimensional, even though the underlying spaces may be infinite-dimensional.</p>
 
 <div class="env-block definition">
@@ -338,7 +347,16 @@ window.CHAPTERS.push({
         {
             id: 'ch15-sec02',
             title: 'Riesz-Schauder Theory',
-            content: `<h2>Riesz-Schauder Theory</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>Spectral Theory for Compact Operators Revisited.</strong> Riesz-Schauder theory refines our understanding of the spectrum of compact operators. It establishes that \(\lambda I - K\) is Fredholm for every \(\lambda \neq 0\) when \(K\) is compact, and that the spectrum consists of at most countably many eigenvalues accumulating only at zero.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove the Riesz-Schauder theorem, analyze the ascending/descending chain of kernels and ranges of \((\lambda I - K)^n\), and show that each nonzero eigenvalue has finite algebraic multiplicity.</p>
+</div>
+
+<h2>Riesz-Schauder Theory</h2>
 <p>The Riesz-Schauder theory describes the spectral properties of compact operators and establishes a fundamental connection: compact perturbations of the identity are always Fredholm of index zero. This is one of the most powerful results linking compactness to the Fredholm property.</p>
 
 <div class="env-block theorem">
@@ -595,7 +613,16 @@ window.CHAPTERS.push({
         {
             id: 'ch15-sec03',
             title: 'Fredholm Alternative',
-            content: `<h2>The Fredholm Alternative</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>Either/Or for Equations.</strong> The Fredholm alternative is one of the most useful results in applied mathematics: for a compact operator \(K\), the equation \((I - K)x = y\) either has a unique solution for every \(y\), or the homogeneous equation \((I - K)x = 0\) has nontrivial solutions and solvability of the inhomogeneous equation requires an orthogonality condition. There is no third possibility.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We state and prove the Fredholm alternative in both its Hilbert space and Banach space formulations, connect it to the solvability of integral equations, and show how the adjoint equation determines the orthogonality conditions.</p>
+</div>
+
+<h2>The Fredholm Alternative</h2>
 <p>The Fredholm alternative is one of the most elegant results in linear analysis. It provides a complete dichotomy for equations of the form \\((I - K)x = y\\): either the equation has a unique solution for every right-hand side, or the associated homogeneous equation has nontrivial solutions. There is no middle ground. This result is the infinite-dimensional generalization of the fact that an \\(n \\times n\\) matrix is either invertible or has a nontrivial null space.</p>
 
 <div class="env-block theorem">
@@ -989,7 +1016,16 @@ window.CHAPTERS.push({
         {
             id: 'ch15-sec04',
             title: 'Index Theory',
-            content: `<h2>Index Theory</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>The Topological Invariant.</strong> The Fredholm index is remarkably stable: it is unchanged by compact perturbations and is locally constant on the set of Fredholm operators. This stability makes the index a powerful tool for proving existence of solutions and classifying operators up to compact perturbation.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove stability of the index under compact perturbations, show that the index is a continuous function on the space of Fredholm operators, compute indices for shift operators and Toeplitz operators, and discuss the Atiyah-Singer index theorem as a far-reaching generalization.</p>
+</div>
+
+<h2>Index Theory</h2>
 <p>The Fredholm index is a remarkably robust invariant. It is stable under compact perturbations and continuous under small perturbations in operator norm. These stability properties make the index a topological invariant — it captures deep structural information about operators that is immune to "small" or "finite-rank" changes.</p>
 
 <div class="env-block theorem">
@@ -1307,7 +1343,20 @@ window.CHAPTERS.push({
         {
             id: 'ch15-sec05',
             title: 'Applications to Integral Equations',
-            content: `<h2>Applications to Integral Equations</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>Fredholm Theory in Action.</strong> Integral equations of the second kind, \(u(x) - \int K(x,y) u(y) dy = f(x)\), are the original motivation for Fredholm theory. We apply the abstract machinery to prove existence and uniqueness results for Volterra and Fredholm integral equations.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We solve Volterra equations via the Neumann series (always unique solutions), apply the Fredholm alternative to Fredholm equations, and compare the kernel structures of Volterra and Fredholm operators.</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Looking Ahead.</strong> Fredholm theory tells us <em>when</em> equations are solvable. Chapter 16 goes deeper by developing the full spectral theorem for compact self-adjoint operators on Hilbert spaces, giving us a complete eigenvalue decomposition analogous to diagonalization of symmetric matrices.</p>
+</div>
+
+<h2>Applications to Integral Equations</h2>
 <p>Fredholm theory finds its most classical and illuminating applications in the study of integral equations. The two main types — Volterra and Fredholm equations of the second kind — have strikingly different behaviors, both explained by the underlying operator theory.</p>
 
 <div class="env-block definition">

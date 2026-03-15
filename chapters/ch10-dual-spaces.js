@@ -12,6 +12,14 @@ window.CHAPTERS.push({
             id: 'sec-dual-space',
             title: 'The Dual Space X*',
             content: `
+<div class="bridge-block chapter-opening">
+<p><strong>Entering the Duality Arc.</strong> Chapters 5-9 developed the fundamental theorems of operator theory. Now we begin a new arc (Chapters 10-13) focused on <em>duality</em>: studying a space through its continuous linear functionals. The dual space \(X^*\) encodes essential information about \(X\), and the interplay between \(X\) and \(X^*\) is one of the deepest and most useful themes in functional analysis.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define the dual space \(X^* = \mathcal{B}(X, \mathbb{F})\), study its structure as a Banach space (always complete, regardless of whether \(X\) is), and develop geometric intuition for functionals as hyperplanes.</p>
+</div>
+
 <p>Throughout functional analysis, understanding a normed space \\(X\\) often requires understanding the <em>continuous linear functionals</em> on \\(X\\). The collection of all such functionals forms a space with its own rich structure.</p>
 
 <div class="env-block definition">
@@ -182,6 +190,14 @@ for a unique \\(a = (a_1, \\ldots, a_n) \\in \\mathbb{R}^n\\). The Cauchy&ndash;
             id: 'sec-dual-lp',
             title: 'Dual of l^p Spaces',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Concrete Duality.</strong> To make the abstract concept of dual space tangible, we compute the duals of the most important sequence spaces. The result is a beautiful pairing: \((\ell^p)^* \cong \ell^q\) where \(1/p + 1/q = 1\). This is the prototype for all duality identifications.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove the Riesz representation \((\ell^p)^* \cong \ell^q\) for \(1 \leq p < \infty\), using Holder's inequality for the upper bound and explicit constructions for the lower bound. We also identify \((\ell^1)^* = \ell^\infty\) and discuss the asymmetry of \((\ell^\infty)^*\).</p>
+</div>
+
 <p>The duality theory of \\(\\ell^p\\) spaces provides the most concrete and important class of examples. The key result identifies \\((\\ell^p)^*\\) with \\(\\ell^q\\) where \\(p\\) and \\(q\\) are conjugate exponents.</p>
 
 <div class="env-block definition">
@@ -407,6 +423,14 @@ so \\(\\Phi(y) \\in (\\ell^p)^*\\) with \\(\\|\\Phi(y)\\| \\leq \\|y\\|_q\\).</p
             id: 'sec-dual-c01',
             title: 'Dual of C[0,1]',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Beyond Sequences: Function Space Duality.</strong> The dual of \(\ell^p\) was another sequence space. For function spaces, the picture is richer. The Riesz-Markov-Kakutani Theorem identifies \(C[0,1]^*\) with the space of signed Borel measures, revealing that continuous linear functionals on continuous functions are integration operators.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We state the Riesz-Markov-Kakutani theorem, explore examples of functionals as measures (point evaluations are Dirac measures), and discuss the Jordan decomposition. This result connects functional analysis to measure theory.</p>
+</div>
+
 <p>Identifying the dual of \\(C[0,1]\\) is one of the classical achievements of functional analysis. The answer involves not just functions but <em>measures</em>, connecting the algebraic structure of functionals to the measure-theoretic fabric of the underlying space.</p>
 
 <div class="env-block definition">
@@ -722,6 +746,14 @@ Moreover, \\(\\|\\Lambda\\| = \\|\\mu\\| = |\\mu|([0,1])\\). The map \\(\\mu \\m
             id: 'sec-double-dual',
             title: 'The Double Dual X**',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Dualizing Again.</strong> If \(X^*\) is a Banach space, it too has a dual: \(X^{**}\), the double dual. Every element of \(X\) naturally lives inside \(X^{**}\) via the canonical embedding \(J: X \to X^{**}\). The question of when \(J\) is surjective (when \(X\) is <em>reflexive</em>) is the subject of Chapter 12.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define the canonical embedding \(J\), prove it is an isometric injection, identify \(X^{**}\) for concrete spaces, and introduce reflexivity. We also show that \(J(X)\) is always a closed subspace of \(X^{**}\) when \(X\) is Banach.</p>
+</div>
+
 <p>Having constructed the dual \\(X^*\\), nothing prevents us from taking the dual again. The resulting <em>double dual</em> (or bidual) \\(X^{**}\\) carries a natural copy of \\(X\\) inside it, providing a fundamental tool for understanding the geometry of Banach spaces.</p>
 
 <div class="env-block definition">
@@ -993,6 +1025,18 @@ In particular, \\(J\\) is injective, so \\(X\\) embeds isometrically into \\(X^{
             id: 'sec-annihilators',
             title: 'Annihilators and Quotient Duals',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Duality and Subspaces.</strong> How does duality interact with subspaces and quotient spaces? The annihilator of a subspace \(M\) consists of all functionals in \(X^*\) that vanish on \(M\). This leads to beautiful isometric identifications: \((X/M)^* \cong M^\perp\) and \(M^* \cong X^*/M^\perp\).</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define annihilators, prove the duality relations between subspaces, quotient spaces, and their duals, and show how these relate to the Hahn-Banach extension theorem from Chapter 6.</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Looking Ahead.</strong> Duality gives us a powerful new perspective on Banach spaces. In Chapter 11, we explore what happens when we equip \(X\) and \(X^*\) with weaker topologies, the weak and weak* topologies, where convergence is tested against functionals rather than in norm. These coarser topologies lead to compactness results that are impossible in the norm topology.</p>
+</div>
+
 <p>The relationship between subspaces of \\(X\\) and subspaces of \\(X^*\\) is mediated by the notion of <em>annihilator</em>. These connections lead to elegant isometric identifications between quotient duals and annihilators.</p>
 
 <div class="env-block definition">

@@ -11,7 +11,16 @@ window.CHAPTERS.push({
         {
             id: 'ch05-sec01',
             title: 'Linear Operators',
-            content: `<h2>Linear Operators</h2>
+            content: `
+<div class="bridge-block chapter-opening">
+<p><strong>From Spaces to Operators.</strong> Chapters 0-4 built a hierarchy of increasingly structured spaces: metric, normed, Banach, Hilbert. Now we shift focus from the spaces themselves to the <em>maps between them</em>. In functional analysis, these maps, called operators, are the primary objects of study. Understanding when an operator is "well-behaved" (bounded, continuous, compact) is the central theme of Chapters 5-9.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define linear operators between normed spaces, examine key examples (differentiation, integration, shift, multiplication), and observe that some operators amplify arbitrarily while others do not. This contrast motivates the notion of boundedness.</p>
+</div>
+
+<h2>Linear Operators</h2>
 <p>Throughout functional analysis, the central objects of study are not just spaces but the <strong>maps between them</strong>. Just as linear algebra studies matrices as linear maps between finite-dimensional spaces, functional analysis studies <em>operators</em> between infinite-dimensional normed spaces.</p>
 
 <div class="env-block definition">
@@ -232,7 +241,16 @@ window.CHAPTERS.push({
         {
             id: 'ch05-sec02',
             title: 'Boundedness Equals Continuity',
-            content: `<h2>Boundedness Equals Continuity</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>The Central Equivalence.</strong> In analysis, continuity is the fundamental notion of "well-behaved." For linear operators, continuity takes a particularly clean form: it is equivalent to boundedness, a condition that can be checked at a single point. This equivalence is one of the cornerstones of functional analysis.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove that a linear operator is continuous if and only if it is bounded, show that continuity at zero implies continuity everywhere, and identify operators that fail to be bounded (like differentiation on \(C^1\) with the sup-norm).</p>
+</div>
+
+<h2>Boundedness Equals Continuity</h2>
 <p>In finite dimensions, every linear operator is automatically continuous. In infinite dimensions, this fails spectacularly — the differentiation operator showed us that. The correct condition is <strong>boundedness</strong>.</p>
 
 <div class="env-block definition">
@@ -478,7 +496,16 @@ window.CHAPTERS.push({
         {
             id: 'ch05-sec03',
             title: 'The Operator Norm',
-            content: `<h2>The Operator Norm</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>Measuring Operators.</strong> Now that we know which operators are bounded, we need to measure <em>how bounded</em> they are. The operator norm quantifies the maximum stretching factor of an operator and turns the set of bounded operators into a normed space, bringing our Chapter 1 tools to bear on operators themselves.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define the operator norm, prove equivalent formulations (supremum over the unit ball, unit sphere, and ratios), show that \(\mathcal{B}(X, Y)\) is a Banach space when \(Y\) is Banach, and compute operator norms for concrete examples.</p>
+</div>
+
+<h2>The Operator Norm</h2>
 <p>The operator norm gives us a way to measure the "size" of a bounded linear operator — how much it can stretch vectors.</p>
 
 <div class="env-block definition">
@@ -738,7 +765,16 @@ window.CHAPTERS.push({
         {
             id: 'ch05-sec04',
             title: 'Composition and Invertibility',
-            content: `<h2>Composition and Invertibility</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>Algebraic Structure of Operators.</strong> Bounded linear operators can be composed (like matrix multiplication) and, when bijective and bounded, inverted. The space \(\mathcal{B}(X)\) of bounded operators on a Banach space forms a Banach algebra, a structure we will explore deeply in Chapter 17. For now, we focus on the basics of composition and invertibility.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove submultiplicativity of the operator norm (\(\|TS\| \leq \|T\|\|S\|\)), study invertibility, and introduce the Neumann series, which inverts operators close to the identity. This is the operator analog of the geometric series \(\frac{1}{1-x} = \sum x^n\).</p>
+</div>
+
+<h2>Composition and Invertibility</h2>
 <p>When \\(X = Y\\), the space \\(\\mathcal{B}(X) = \\mathcal{B}(X, X)\\) becomes a <strong>Banach algebra</strong>: a Banach space that is also an algebra with submultiplicative norm \\(\\|ST\\| \\leq \\|S\\| \\cdot \\|T\\|\\).</p>
 
 <div class="env-block definition">
@@ -1051,7 +1087,20 @@ window.CHAPTERS.push({
         {
             id: 'ch05-sec05',
             title: 'Finite Rank Operators',
-            content: `<h2>Finite Rank Operators</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>Bridging Finite and Infinite Dimensions.</strong> Finite-rank operators are the simplest infinite-dimensional operators: their range is finite-dimensional, so they behave like matrices. They serve as building blocks for compact operators, which we will study systematically in Chapter 14.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define finite-rank operators, express them as sums of rank-one operators \(y \otimes f\), and prove they are compact. We also show that compact operators are norm-limits of finite-rank operators (in Hilbert spaces), previewing the theory to come.</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Looking Ahead.</strong> We now have a rich theory of bounded operators. But many deep questions remain: Can a bounded functional always be extended to a larger space? Is a pointwise-bounded family of operators uniformly bounded? When is a bijective bounded operator automatically an isomorphism? These are answered by the "big theorems" of Chapters 6-9, starting with the Hahn-Banach Theorem.</p>
+</div>
+
+<h2>Finite Rank Operators</h2>
 <p>Between the trivial zero operator and general bounded operators lies a particularly tractable class: operators whose range is finite-dimensional.</p>
 
 <div class="env-block definition">

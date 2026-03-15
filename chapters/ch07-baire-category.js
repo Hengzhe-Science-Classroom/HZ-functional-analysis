@@ -13,6 +13,14 @@ window.CHAPTERS.push({
             id: 'ch07-sec01',
             title: 'Nowhere Dense Sets',
             content: `
+<div class="bridge-block chapter-opening">
+<p><strong>The Topological Engine.</strong> Chapter 6 gave us the Hahn-Banach Theorem, which works in all normed spaces. The next three big theorems (Uniform Boundedness, Open Mapping, Closed Graph) all require completeness. Why? Because they all rest on a single topological result: the Baire Category Theorem. This chapter develops the Baire Category Theorem from scratch, giving us the foundational tool that powers Chapters 8 and 9.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We begin with nowhere dense sets: sets so "thin" that they have empty interior even after taking closure. Understanding these "negligible" sets is the first step toward the Baire Category Theorem.</p>
+</div>
+
                 <h2>Nowhere Dense Sets</h2>
 
                 <p>Before we can state one of the most powerful results in analysis, we need a precise vocabulary for describing how "thin" or "thick" a set is from a topological point of view. The first concept is that of a <strong>nowhere dense set</strong> -- a set so thin that it cannot dominate any open region, no matter how small.</p>
@@ -415,6 +423,14 @@ window.CHAPTERS.push({
             id: 'ch07-sec02',
             title: 'First and Second Category',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Classifying Sets by Size.</strong> Nowhere dense sets are individually small, but what about countable unions of them? The Baire category framework classifies sets as "meager" (first category, countable unions of nowhere dense sets) or "non-meager" (second category). This is a topological notion of "smallness" distinct from measure-theoretic smallness.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define first and second category sets, explore examples (\(\mathbb{Q}\) is meager in \(\mathbb{R}\)), and develop the intuition that meager sets are "topologically negligible." We also introduce residual sets (complements of meager sets) as "topologically generic."</p>
+</div>
+
                 <h2>First and Second Category</h2>
 
                 <p>A single nowhere dense set is "thin." But what if we stack countably many thin sets together? Do we get something thick, or does the thinness persist? This question leads to Baire's fundamental classification of topological spaces.</p>
@@ -797,6 +813,14 @@ window.CHAPTERS.push({
             id: 'ch07-sec03',
             title: 'Baire Category Theorem',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Complete Spaces Are Large.</strong> The Baire Category Theorem states that a complete metric space is <em>not</em> meager in itself, equivalently, every countable intersection of dense open sets is dense. This is the fundamental reason that completeness is so powerful. Every subsequent "big theorem" in this course ultimately traces back to this result.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We state and prove the Baire Category Theorem via the nested balls argument, derive both the "intersection" and "union" formulations, and present the first applications: existence of continuous nowhere-differentiable functions and density of polynomials with all roots irrational.</p>
+</div>
+
                 <h2>The Baire Category Theorem</h2>
 
                 <p>We now arrive at one of the cornerstones of functional analysis. The Baire Category Theorem tells us that complete metric spaces are "large" in a topological sense: they cannot be decomposed into countably many negligible pieces.</p>
@@ -1170,6 +1194,14 @@ window.CHAPTERS.push({
             id: 'ch07-sec04',
             title: 'Applications',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Baire Category in Action.</strong> The Baire Category Theorem is a versatile tool with surprising applications well beyond the "big three" theorems. In this section, we explore applications to the structure of \(\mathbb{R}\), the existence of pathological functions, and topological games.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove that \(\mathbb{R}\) is uncountable (a Baire category proof), show that continuous nowhere-differentiable functions are "generic," and explore the Banach-Mazur game, which gives an interactive characterization of meager and comeager sets.</p>
+</div>
+
                 <h2>Applications of the Baire Category Theorem</h2>
 
                 <p>The Baire Category Theorem is remarkable not just as an abstract result, but as a tool that proves <em>existence</em> theorems -- often showing that "generic" objects have surprising properties, without constructing any specific example.</p>
@@ -1507,6 +1539,18 @@ window.CHAPTERS.push({
             id: 'ch07-sec05',
             title: 'Banach-Mazur Game',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Category Through Games.</strong> The Banach-Mazur game provides an elegant game-theoretic characterization of Baire category. Two players alternately choose nested intervals, and the outcome depends on whether the intersection hits a target set. This playful perspective deepens our understanding of meager and comeager sets.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define the Banach-Mazur game, prove that Player II has a winning strategy if and only if the target set is meager, and use this to give alternative proofs of Baire category results.</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Looking Ahead.</strong> With the Baire Category Theorem in our toolkit, we are ready for its most celebrated application: the Uniform Boundedness Principle (Banach-Steinhaus Theorem) in Chapter 8. The idea is deceptively simple: if a family of operators is pointwise bounded, it must be uniformly bounded, but the proof requires the full force of Baire category.</p>
+</div>
+
                 <h2>The Banach-Mazur Game</h2>
 
                 <p>The Baire Category Theorem has a beautiful <strong>game-theoretic interpretation</strong> due to Banach and Mazur. This viewpoint makes the theorem more intuitive and connects topology to strategic reasoning.</p>

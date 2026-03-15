@@ -13,6 +13,14 @@ window.CHAPTERS.push({
             id: 'complete-normed-spaces',
             title: 'Complete Normed Spaces',
             content: `
+<div class="bridge-block chapter-opening">
+<p><strong>From Normed Spaces to Banach Spaces.</strong> In Chapter 1, we equipped vector spaces with norms, gaining the ability to measure size and distance. But we also saw that normed spaces can be "incomplete," with Cauchy sequences that fail to converge. This chapter introduces Banach spaces, the complete normed spaces, and demonstrates why completeness is the essential hypothesis for virtually every major theorem in functional analysis.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define Banach spaces, prove that finite-dimensional normed spaces are always complete, characterize closed subspaces as the complete ones, and introduce the completion construction that embeds any normed space into a Banach space.</p>
+</div>
+
 <h2>2.1 Complete Normed Spaces</h2>
 
 <p>In Chapter 1 we studied normed spaces, which endow a vector space with a notion of distance. A fundamental question now arises: <em>does every Cauchy sequence converge?</em> This is the question of <strong>completeness</strong>, and the spaces where the answer is "yes" form the backbone of functional analysis.</p>
@@ -359,6 +367,14 @@ window.CHAPTERS.push({
             id: 'examples-banach-spaces',
             title: 'Examples of Banach Spaces',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Completeness in Practice.</strong> The definition of a Banach space is simple, but verifying completeness for specific spaces requires real work. In this section, we build a catalog of the most important Banach spaces, each of which appears repeatedly in later chapters.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove that \(\ell^p\) spaces, \(C[a,b]\) with the sup-norm, and \(L^p\) spaces are Banach spaces. We also identify important spaces that are <em>not</em> complete and explain why.</p>
+</div>
+
 <h2>2.2 Examples of Banach Spaces</h2>
 
 <p>Let us build a catalog of the most important Banach spaces. These examples recur throughout functional analysis and serve as test cases for all the major theorems.</p>
@@ -657,6 +673,14 @@ is a Banach space.
             id: 'banach-fixed-point',
             title: 'Banach Fixed Point Theorem',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>The First Payoff of Completeness.</strong> With our catalog of Banach spaces established, we prove the first major theorem that requires completeness: the Banach Fixed Point Theorem (Contraction Mapping Principle). This result is both a powerful existence-and-uniqueness tool and a constructive algorithm, with applications ranging from differential equations to numerical analysis.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We state and prove the contraction mapping principle, analyze the rate of convergence, and apply it to solve differential and integral equations. The iterative nature of the proof foreshadows many fixed-point arguments to come.</p>
+</div>
+
 <h2>2.3 Banach Fixed Point Theorem</h2>
 
 <p>The Banach Fixed Point Theorem (also called the Contraction Mapping Theorem) is one of the most powerful and widely applicable results in analysis. It provides not just existence and uniqueness of fixed points, but also a constructive algorithm for finding them.</p>
@@ -912,6 +936,14 @@ is a contraction on \\(C([t_0 - \\delta, t_0 + \\delta])\\) for small enough \\(
             id: 'series-banach-spaces',
             title: 'Series in Banach Spaces',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Summation in Infinite Dimensions.</strong> In \(\mathbb{R}\), absolute convergence implies convergence. Does this hold in normed spaces? The answer is yes precisely when the space is complete. This characterization gives us an alternative lens on Banach spaces and a practical tool for working with series expansions.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove that absolute convergence implies convergence if and only if the space is Banach, study the Weierstrass M-test in normed spaces, and examine Neumann series for operators, which will become essential in spectral theory.</p>
+</div>
+
 <h2>2.4 Series in Banach Spaces</h2>
 
 <p>One of the most elegant characterizations of Banach spaces involves the convergence of series. This connection is both theoretically beautiful and practically useful.</p>
@@ -1222,6 +1254,18 @@ and similarly \\(S(I - T) = I\\). \\(\\square\\)
             id: 'schauder-bases-separability',
             title: 'Schauder Bases and Separability',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Beyond Hamel Bases.</strong> In Chapter 1, we saw that Hamel bases are unwieldy in infinite dimensions. Banach spaces offer a topological alternative: Schauder bases, where every element is an infinite (convergent) series. This connects the algebraic notion of basis to the analytic notion of series expansion.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define Schauder bases, prove basic properties, and introduce separability. We show that having a Schauder basis implies separability, and examine the long-standing question of whether every separable Banach space has a Schauder basis (Enflo's negative answer).</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Looking Ahead.</strong> Banach spaces give us completeness, but they lack the geometric richness of angles and orthogonality. In Chapter 3, we introduce inner product spaces and Hilbert spaces, where the notion of "perpendicularity" opens the door to projection, decomposition, and Fourier analysis in infinite dimensions.</p>
+</div>
+
 <h2>2.5 Schauder Bases and Separability</h2>
 
 <p>In finite-dimensional spaces, every vector is a <em>finite</em> linear combination of basis vectors. In infinite dimensions, we need to extend this notion to allow <em>infinite</em> series representations. This leads to the distinction between algebraic (Hamel) bases and topological (Schauder) bases.</p>

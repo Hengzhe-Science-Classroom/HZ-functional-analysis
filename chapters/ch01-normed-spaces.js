@@ -11,6 +11,14 @@ window.CHAPTERS.push({
             id: 'sec01-vector-spaces',
             title: 'Vector Spaces Review',
             content: `
+<div class="bridge-block chapter-opening">
+<p><strong>From Metric Spaces to Normed Spaces.</strong> In Chapter 0, we studied metric spaces, where distance was the fundamental concept. But metric spaces lack algebraic structure: we cannot add points or scale them. In this chapter, we bring together the algebra of vector spaces and the topology of metrics by introducing <em>norms</em>. A norm measures the "size" of a vector, and from it a metric naturally emerges. This marriage of algebra and analysis is the defining feature of functional analysis.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We review vector spaces, subspaces, linear independence, and the notion of dimension. The key takeaway is that infinite-dimensional spaces require topological tools beyond pure algebra, motivating the norm concept in the next section.</p>
+</div>
+
 <h2>1.1 Vector Spaces Review</h2>
 
 <p>Before embarking on functional analysis proper, we must ensure a solid command of the algebraic structures that underpin the entire theory. A <em>vector space</em> (or <em>linear space</em>) over a field \\(\\mathbb{F}\\) (where \\(\\mathbb{F} = \\mathbb{R}\\) or \\(\\mathbb{C}\\)) is the fundamental object of study.</p>
@@ -250,6 +258,14 @@ The <em>span</em> of a subset \\(S \\subseteq V\\) is the set of all finite line
             id: 'sec02-norms',
             title: 'Norms and Normed Spaces',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Adding Size to Structure.</strong> With the algebraic framework of vector spaces in place, we now introduce the concept that bridges algebra and analysis: the <em>norm</em>. A norm assigns a non-negative "length" to each vector and, through it, defines a metric compatible with the linear structure.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define norms axiomatically, show how every norm induces a metric, and explore the fundamental examples. We emphasize translation invariance and homogeneity, properties that distinguish normed spaces from general metric spaces.</p>
+</div>
+
 <h2>1.2 Norms and Normed Spaces</h2>
 
 <p>The transition from pure algebra to analysis requires a notion of <em>size</em> or <em>distance</em>. A norm is a function that assigns a "length" to each vector, and from it we derive a metric, a topology, and the tools of convergence and continuity.</p>
@@ -440,6 +456,14 @@ Translation invariance: \\(d(x+z, y+z) = \\|(x+z)-(y+z)\\| = \\|x-y\\| = d(x,y)\
             id: 'sec03-p-norms',
             title: 'The p-norms',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>A Family of Norms.</strong> Having defined norms abstractly, we now study the most important concrete family: the \(p\)-norms. These norms on \(\mathbb{R}^n\) and sequence spaces provide the prototypical examples that recur throughout functional analysis, and their study requires the classical inequalities of Young, Holder, and Minkowski.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove Young's inequality, derive Holder's inequality, establish the Minkowski inequality (which shows the triangle inequality for \(\|\cdot\|_p\)), and visualize how \(p\)-norm unit balls change shape as \(p\) varies.</p>
+</div>
+
 <h2>1.3 The \\(p\\)-Norms</h2>
 
 <p>The \\(p\\)-norms form one of the most important families of norms in analysis. They interpolate between the "taxicab" norm (\\(p=1\\)), the Euclidean norm (\\(p=2\\)), and the max norm (\\(p=\\infty\\)).</p>
@@ -834,6 +858,14 @@ In particular, \\(\\|x\\|_\\infty \\le \\|x\\|_2 \\le \\|x\\|_1 \\le n \\|x\\|_\
             id: 'sec04-equivalent-norms',
             title: 'Equivalent Norms',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>When Do Different Norms Agree?</strong> Different norms on the same vector space can produce different topologies and different notions of convergence. A central question is: when do two norms lead to the <em>same</em> topology? The answer reveals a striking dichotomy between finite and infinite dimensions.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define norm equivalence, prove that all norms on finite-dimensional spaces are equivalent, and show that this fails in infinite dimensions. This is the first glimpse of how infinite-dimensional analysis diverges fundamentally from finite-dimensional linear algebra.</p>
+</div>
+
 <h2>1.4 Equivalent Norms</h2>
 
 <p>Different norms on the same vector space can give rise to different metrics and topologies. When two norms generate the <em>same</em> topology, they are called <em>equivalent</em>. The main theorem of this section is one of the most important finite-dimensional results in functional analysis.</p>
@@ -1169,6 +1201,18 @@ Since \\(y_0 + \\|x_0-y_0\\| y \\in Y\\), the numerator is \\(\\ge d\\). So \\(\
             id: 'sec05-quotient-product',
             title: 'Quotient and Product Spaces',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Building New Spaces from Old.</strong> Just as algebra constructs quotient groups and product groups, functional analysis builds quotient normed spaces and product normed spaces. These constructions are essential for duality theory, the isomorphism theorems, and many applications throughout the course.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define product norms and quotient norms, verify they satisfy the norm axioms, and show that completeness is preserved under these constructions. These tools will reappear when we study dual spaces and Fredholm theory.</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Looking Ahead.</strong> We have seen that normed spaces unify algebra and metric geometry. But a normed space can have "holes," sequences that are Cauchy but fail to converge. In Chapter 2, we study Banach spaces, the complete normed spaces where limits always exist and the deep theorems of functional analysis live.</p>
+</div>
+
 <h2>1.5 Quotient and Product Spaces</h2>
 
 <p>Vector spaces can be combined or decomposed in several ways. Two fundamental constructions are the <em>product</em> (direct sum) and <em>quotient</em> of normed spaces. Both carry natural norms and play essential roles in the structural theory of Banach spaces.</p>

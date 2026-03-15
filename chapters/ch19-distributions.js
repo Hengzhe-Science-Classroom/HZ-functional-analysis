@@ -12,6 +12,14 @@ window.CHAPTERS.push({
             id: 'test-functions-distributions',
             title: 'Test Functions and Distributions',
             content: `
+<div class="bridge-block chapter-opening">
+<p><strong>Generalized Functions and Weak Solutions.</strong> Chapter 18 showed that unbounded operators like \(-d^2/dx^2\) are central to physics and PDE. But classical solutions of differential equations may not exist, or may be too restrictive. Distributions, introduced by Laurent Schwartz, generalize functions to a broader class of objects where differentiation always makes sense. Combined with Sobolev spaces, they provide the natural framework for modern PDE theory, bringing our course from abstract functional analysis to its most powerful application.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define test functions \(C_c^\infty(\Omega)\), equip them with a topology, and define distributions as continuous linear functionals on test functions. We identify regular distributions (given by locally integrable functions) and singular distributions (like the Dirac delta).</p>
+</div>
+
                 <h2>Test Functions and Distributions</h2>
 
                 <p>Classical analysis requires functions to be pointwise-defined. But many objects arising in physics and PDE theory (such as point masses, impulses, and densities concentrated on surfaces) resist pointwise description. <strong>Distribution theory</strong>, pioneered by Laurent Schwartz in the 1940s, provides a rigorous framework for these "generalized functions."</p>
@@ -268,6 +276,14 @@ window.CHAPTERS.push({
             id: 'operations-distributions',
             title: 'Operations on Distributions',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Calculus for Distributions.</strong> The power of distributions lies in the fact that every distribution is infinitely differentiable. The derivative of a distribution is defined by "integration by parts" against test functions. This makes differentiation a universal operation, applicable even to functions with jumps and corners.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define the distributional derivative, verify it extends the classical derivative, compute distributional derivatives of non-smooth functions (\(|x|\), Heaviside step), and study multiplication by smooth functions and convolution with distributions.</p>
+</div>
+
                 <h2>Operations on Distributions</h2>
 
                 <p>One of the great advantages of distribution theory is that every distribution is infinitely differentiable. The definition of differentiation is forced upon us by integration by parts: if \\(f\\) is smooth, then \\(\\int f' \\varphi = -\\int f \\varphi'\\).</p>
@@ -536,6 +552,14 @@ window.CHAPTERS.push({
             id: 'tempered-distributions',
             title: 'Tempered Distributions',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Distributions with Growth Control.</strong> General distributions can grow arbitrarily at infinity. Tempered distributions are those with at most polynomial growth, and they are the natural domain for the Fourier transform. The Schwartz space of rapidly decreasing functions is the corresponding space of test functions.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define the Schwartz space \(\mathcal{S}(\mathbb{R}^n)\), tempered distributions \(\mathcal{S}'(\mathbb{R}^n)\), and extend the Fourier transform to tempered distributions. We prove the fundamental identity: the Fourier transform converts differentiation to multiplication.</p>
+</div>
+
                 <h2>Tempered Distributions and the Fourier Transform</h2>
 
                 <p>The Fourier transform is the most important tool in harmonic analysis. To extend it to distributions, we need a space of test functions that is preserved by the Fourier transform. This leads to the Schwartz space.</p>
@@ -762,6 +786,14 @@ window.CHAPTERS.push({
             id: 'sobolev-spaces',
             title: 'Sobolev Spaces',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Function Spaces for PDE.</strong> Sobolev spaces \(W^{k,p}(\Omega)\) consist of \(L^p\) functions whose distributional derivatives up to order \(k\) are also in \(L^p\). They are the "right" function spaces for weak solutions of PDE: large enough to contain solutions, but structured enough that the solutions are useful.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define Sobolev spaces, prove they are Banach spaces (Hilbert spaces when \(p = 2\)), establish the Sobolev embedding theorem (relating integrability to continuity), and prove the Rellich-Kondrachov compactness theorem.</p>
+</div>
+
                 <h2>Sobolev Spaces</h2>
 
                 <p>Sobolev spaces bridge distribution theory and PDE theory. They consist of functions possessing "weak derivatives" up to a specified order in \\(L^p\\). These spaces provide the natural setting for variational problems and weak solutions of PDEs.</p>
@@ -978,6 +1010,18 @@ window.CHAPTERS.push({
             id: 'sobolev-embedding-pde',
             title: 'Sobolev Embedding and PDE Applications',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Weak Solutions via Functional Analysis.</strong> The ultimate application of functional analysis to PDE: the Lax-Milgram theorem guarantees existence and uniqueness of weak solutions to elliptic PDE. This combines Hilbert space theory, Sobolev embeddings, and coercivity into a single, elegant existence machine.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We formulate the weak formulation of the Dirichlet problem, state and prove the Lax-Milgram theorem, verify its hypotheses for the Poisson equation, and discuss regularity theory that bootstraps weak solutions to classical ones.</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Course Conclusion.</strong> From metric spaces to distributions, from abstract norms to concrete PDE solutions, functional analysis provides a unified language for infinite-dimensional problems. The four pillars (Hahn-Banach, Baire, UBP, OMT), the geometry of Hilbert spaces, the spectral theory of operators, and the distributional framework for PDE together form a toolkit of extraordinary power. Every topic in this course connects to the others, and the ideas developed here are the foundation for research in analysis, geometry, physics, and applied mathematics.</p>
+</div>
+
                 <h2>Sobolev Embedding and PDE Applications</h2>
 
                 <p>The crowning achievements of Sobolev space theory are the <strong>embedding theorems</strong>, which convert regularity in the Sobolev sense (integrability of derivatives) into classical regularity (continuity, differentiability). These results are the bridge between weak and classical solutions of PDEs.</p>

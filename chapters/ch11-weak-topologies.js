@@ -10,6 +10,14 @@ window.CHAPTERS.push({
             id: 'initial-topologies',
             title: 'Initial Topologies',
             content: `
+<div class="bridge-block chapter-opening">
+<p><strong>Weaker Topologies for Stronger Theorems.</strong> In Chapter 10, we studied dual spaces in the norm topology. But the norm topology on infinite-dimensional spaces is "too strong" for many purposes: closed bounded sets are almost never compact. This chapter introduces weaker topologies, the weak topology on \(X\) and the weak* topology on \(X^*\), where compactness becomes available and many problems become tractable.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We begin with the general construction of initial topologies (the coarsest topology making a family of maps continuous). This abstract framework unifies the weak and weak* topologies as special cases.</p>
+</div>
+
 <h2>The Weakest Topology Making Functions Continuous</h2>
 
 <p>Throughout analysis, we frequently encounter the following question: given a set \\(X\\) and a family of maps \\(f_\\alpha: X \\to Y_\\alpha\\) into topological spaces, what is the <em>coarsest</em> (weakest) topology on \\(X\\) making every \\(f_\\alpha\\) continuous? This is the <strong>initial topology</strong>, and it underlies all weak-type topologies in functional analysis.</p>
@@ -279,6 +287,14 @@ window.CHAPTERS.push({
             id: 'weak-topology',
             title: 'Weak Topology on X',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Convergence Tested by Functionals.</strong> The weak topology on \(X\) is the coarsest topology making every functional \(f \in X^*\) continuous. Weak convergence \(x_n \rightharpoonup x\) means \(f(x_n) \to f(x)\) for all \(f \in X^*\). This is strictly weaker than norm convergence in infinite dimensions, and that is exactly its power.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define the weak topology, characterize weakly open sets and weak convergence, prove that the weak topology is Hausdorff, and show that norm-closed convex sets are weakly closed (Mazur's theorem). We also establish weak lower semicontinuity of the norm.</p>
+</div>
+
 <h2>The Topology \\(\\sigma(X, X^*)\\)</h2>
 
 <p>The most important instance of the initial topology in functional analysis arises when we use the dual space to define a topology on a normed space.</p>
@@ -635,6 +651,14 @@ window.CHAPTERS.push({
             id: 'weak-star-topology',
             title: 'Weak* Topology on X*',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>An Even Weaker Topology on the Dual.</strong> On \(X^*\), we can define an even coarser topology: the weak* topology, where convergence means \(f_n(x) \to f(x)\) for every \(x \in X\). The payoff is the Banach-Alaoglu theorem: the closed unit ball of \(X^*\) is always weak*-compact, a result with no analog in the norm topology (in infinite dimensions).</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define the weak* topology, compare it with the weak and norm topologies on \(X^*\), prove the Banach-Alaoglu theorem (via Tychonoff's theorem), and explore its consequences for extracting convergent subsequences from bounded sequences of functionals.</p>
+</div>
+
 <h2>The Topology \\(\\sigma(X^*, X)\\)</h2>
 
 <p>While the weak topology uses all of \\(X^*\\) to define convergence on \\(X\\), the <strong>weak* topology</strong> on \\(X^*\\) uses only the <em>evaluation functionals</em> from \\(X\\), rather than all of \\(X^{**}\\).</p>
@@ -859,6 +883,14 @@ window.CHAPTERS.push({
             id: 'banach-alaoglu',
             title: 'Banach-Alaoglu Theorem',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Compactness in Dual Spaces.</strong> Banach-Alaoglu gives weak*-compactness of the dual ball. Goldstine's theorem complements this by showing that the canonical image \(J(B_X)\) is weak*-dense in \(B_{X^{**}}\). Together, these results form the bridge to reflexivity theory in Chapter 12.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove Goldstine's theorem, connect weak*-density to reflexivity (\(X\) is reflexive if and only if \(J(B_X) = B_{X^{**}}\)), and discuss sequential versions of Banach-Alaoglu in separable spaces.</p>
+</div>
+
 <h2>Compactness in the Weak* Topology</h2>
 
 <p>The Banach-Alaoglu theorem is one of the most important results in functional analysis. It provides a powerful source of compactness that compensates for the failure of the Heine-Borel theorem in infinite dimensions.</p>
@@ -1152,6 +1184,18 @@ window.CHAPTERS.push({
             id: 'goldstine-theorem',
             title: "Goldstine's Theorem",
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Connecting Compactness Notions.</strong> In metric spaces, compactness and sequential compactness are equivalent. In weak topologies, this equivalence is far from obvious. The Eberlein-Smulian theorem resolves this: a subset of a Banach space is weakly compact if and only if it is weakly sequentially compact.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We state the Eberlein-Smulian theorem, explore its implications for extracting weakly convergent subsequences, and use it to characterize reflexive spaces. We also revisit Goldstine's theorem in light of these results.</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Looking Ahead.</strong> The weak and weak* topologies have given us compactness tools unavailable in the norm topology. In Chapter 12, we study reflexive spaces, where the canonical embedding \(J: X \to X^{**}\) is surjective, unlocking the full power of weak compactness via the Eberlein-Smulian theorem.</p>
+</div>
+
 <h2>Density of \\(J(B_X)\\) in \\(B_{X^{**}}\\)</h2>
 
 <p>Goldstine's theorem reveals a fundamental relationship between a Banach space and its bidual. While the canonical embedding \\(J: X \\to X^{**}\\) is always an isometry, Goldstine's theorem tells us that the image of the unit ball is always <em>dense</em> in the bidual ball, regardless of whether \\(X\\) is reflexive.</p>

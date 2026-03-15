@@ -11,6 +11,14 @@ sections: [
 id: 'sec-metric-spaces',
 title: 'Metric Spaces',
 content: `
+<div class="bridge-block chapter-opening">
+<p><strong>Welcome to Functional Analysis.</strong> This opening chapter builds the topological toolkit you will use throughout the course. We begin with the most fundamental concept: <em>distance</em>. From a single, simple idea of measuring how far apart two points are, an entire universe of topology, convergence, and continuity unfolds. By the end of this chapter, you will have the language of metric spaces, open and closed sets, completeness, compactness, and continuity firmly in hand, ready to specialize these ideas to normed and inner product spaces in the chapters ahead.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define metric spaces axiomatically, explore key examples (Euclidean, \(\ell^p\), discrete, and sup metrics on function spaces), and prove the reverse triangle inequality. The goal is to see that "distance" is a flexible concept with many incarnations.</p>
+</div>
+
 <p>Before we can study functional analysis — the analysis of infinite-dimensional spaces — we need a rigorous language for measuring <em>distance</em>. The concept of a metric space extracts the essential properties of distance from familiar settings like \\(\\mathbb{R}^n\\) and applies them universally.</p>
 
 <div class="env-block definition">
@@ -279,6 +287,14 @@ exercises: [
 id: 'sec-open-closed',
 title: 'Open and Closed Sets',
 content: `
+<div class="bridge-block section-bridge">
+<p><strong>From Distance to Topology.</strong> In the previous section, we defined what it means to measure distance in an abstract space. Now we ask: what geometric and topological structure does a metric induce? The answer lies in open and closed sets, the building blocks of topology that let us talk about neighborhoods, limits, and boundary behavior.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define open balls, open sets, closed sets, and their interplay. We then study interior, closure, and boundary, the three operations that characterize how a set sits inside the ambient space. These notions will be indispensable when we define continuity and compactness later.</p>
+</div>
+
 <p>Once we have a metric, we can define the topology of the space — which sets are "open," which are "closed," and what it means for a point to be near a set. These ideas are the skeleton of analysis.</p>
 
 <div class="env-block definition">
@@ -531,6 +547,14 @@ exercises: [
 id: 'sec-completeness',
 title: 'Completeness and Completion',
 content: `
+<div class="bridge-block section-bridge">
+<p><strong>From Topology to Convergence.</strong> Open and closed sets tell us about the static geometry of a metric space. But analysis is fundamentally about <em>limits</em>. The crucial question is: do Cauchy sequences always converge within our space? This section introduces completeness, the single most important structural property in functional analysis, and shows how any metric space can be "completed."</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define Cauchy sequences and complete metric spaces, prove that closed subsets of complete spaces are complete, and construct the completion of an arbitrary metric space. These ideas foreshadow the Banach space concept in Chapter 2.</p>
+</div>
+
 <p>Completeness — the guarantee that "Cauchy sequences converge" — is the most important structural property a metric space can have. Without it, limits can "escape" the space, and analysis becomes unreliable. Functional analysis lives almost exclusively in complete spaces.</p>
 
 <div class="env-block definition">
@@ -794,6 +818,14 @@ exercises: [
 id: 'sec-compactness',
 title: 'Compactness',
 content: `
+<div class="bridge-block section-bridge">
+<p><strong>From Completeness to Compactness.</strong> Completeness ensures limits exist, but compactness goes further: it guarantees that <em>every</em> sequence has a convergent subsequence. In finite dimensions compactness is equivalent to being closed and bounded, but in infinite dimensions this equivalence fails spectacularly. Understanding exactly when and why is a recurring theme in functional analysis.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We present three equivalent characterizations of compactness in metric spaces, prove the Heine-Borel property, study total boundedness, and highlight the crucial failure of the closed-bounded-equals-compact equivalence in infinite dimensions.</p>
+</div>
+
 <p>Compactness is a finiteness condition that gives us extraordinary analytic power. In compact spaces, continuous functions achieve their bounds, sequences have convergent subsequences, and many otherwise difficult problems become tractable. Understanding compactness in metric spaces is essential because <strong>in infinite-dimensional spaces, compactness is rare and precious</strong>.</p>
 
 <div class="env-block definition">
@@ -1020,6 +1052,18 @@ exercises: [
 id: 'sec-continuous-maps',
 title: 'Continuous Maps',
 content: `
+<div class="bridge-block section-bridge">
+<p><strong>From Spaces to Maps.</strong> So far we have studied the internal structure of metric spaces. Now we turn to <em>maps between them</em>. Continuous maps are the morphisms that preserve topological structure, and understanding them prepares us directly for the bounded linear operators that dominate the rest of this course.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define continuity via \(\varepsilon\)-\(\delta\), sequential characterization, and preimage characterization. We then study uniform continuity, Lipschitz maps, and the preservation of compactness and connectedness under continuous maps.</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Looking Ahead.</strong> With metric spaces, topology, completeness, compactness, and continuity established, we are ready to add algebraic structure. In Chapter 1, we equip vector spaces with norms, fusing algebra and topology into the normed spaces that form the backbone of functional analysis.</p>
+</div>
+
 <p>Continuous maps are the morphisms of the category of metric spaces — they are the structure-preserving maps. A deep understanding of continuity in metric spaces prepares us for the bounded linear operators that are the central objects of functional analysis.</p>
 
 <div class="env-block definition">

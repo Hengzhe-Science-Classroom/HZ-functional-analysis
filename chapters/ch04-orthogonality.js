@@ -12,6 +12,14 @@ window.CHAPTERS.push({
             id: 'ch04-sec01',
             title: 'Orthogonal Complements',
             content: `
+<div class="bridge-block chapter-opening">
+<p><strong>Deepening the Geometry of Hilbert Spaces.</strong> Chapter 3 introduced Hilbert spaces and their inner product geometry. Now we systematically develop the theory of orthogonal decomposition: splitting a Hilbert space into a subspace and its orthogonal complement. This chapter completes the "spaces" arc (Chapters 0-4) by establishing the projection and decomposition tools that the entire second half of the course relies upon.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define orthogonal complements, prove they are always closed subspaces, and establish the direct sum decomposition \(H = M \oplus M^\perp\). We also verify that \((M^\perp)^\perp = \overline{M}\), connecting closure and orthogonality.</p>
+</div>
+
 <h2>1 &mdash; Orthogonal Complements</h2>
 
 <h3>1.1 Definition and Basic Properties</h3>
@@ -278,6 +286,14 @@ Equivalently, \\(H = M \\oplus M^\\perp\\).
             id: 'ch04-sec02',
             title: 'Projection Theorem',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>From Complements to Projections.</strong> The orthogonal complement splits \(H\) abstractly into two pieces. The Projection Theorem makes this concrete by constructing a unique "best approximation" to any vector from a closed subspace. This is the theoretical foundation of least-squares methods, signal processing, and approximation theory.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove the Projection Theorem for closed convex sets and closed subspaces, characterize the projection as the unique minimizer of distance, and establish the variational inequality that defines orthogonal projections.</p>
+</div>
+
 <h2>2 &mdash; The Projection Theorem</h2>
 
 <h3>2.1 Closest Point in a Convex Set</h3>
@@ -529,6 +545,14 @@ $$\\|x\\|^2 = \\|m_0\\|^2 + \\|x - m_0\\|^2.$$
             id: 'ch04-sec03',
             title: 'Orthogonal Projections',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Projections as Operators.</strong> So far, projections have been geometric constructions: "drop a perpendicular." Now we study them as <em>operators</em>, mapping the entire space to a subspace. This operator-theoretic viewpoint connects the geometry of Chapters 3-4 to the operator theory that begins in Chapter 5.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define orthogonal projection operators, prove they are bounded, self-adjoint, and idempotent (\(P^2 = P\)), and show that every such operator is the projection onto its range. We also study the lattice of projections.</p>
+</div>
+
 <h2>3 &mdash; Orthogonal Projections</h2>
 
 <h3>3.1 The Projection Operator</h3>
@@ -777,6 +801,14 @@ $$P_M x = m_0 \\quad \\text{where } x = m_0 + m_0^\\perp, \\; m_0 \\in M, \\; m_
             id: 'ch04-sec04',
             title: 'Fourier Series as Projections',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Breaking Spaces Apart.</strong> Orthogonal projections let us decompose a Hilbert space into a direct sum of orthogonal subspaces. This section generalizes the two-piece decomposition \(H = M \oplus M^\perp\) to finite and even countably infinite orthogonal sums.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We formalize internal and external direct sums, prove the orthogonal decomposition theorem for families of subspaces, and connect these decompositions to spectral theory, where an operator is understood by decomposing its domain into eigenspaces.</p>
+</div>
+
 <h2>4 &mdash; Fourier Series as Projections</h2>
 
 <h3>4.1 Orthonormal Bases Revisited</h3>
@@ -1142,6 +1174,18 @@ $$\\|f\\|_2^2 = \\sum_{n=-\\infty}^{\\infty} |\\hat{f}_n|^2$$
             id: 'ch04-sec05',
             title: 'Least Squares Applications',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Theory in Action.</strong> The abstract projection machinery we have built has immediate, concrete applications. In this section, we apply orthogonal projections to least-squares approximation, showing how the normal equation arises directly from the Projection Theorem.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We solve the least-squares problem in Hilbert spaces, derive the normal equation, apply it to polynomial curve fitting, and interpret the residual geometrically as the component orthogonal to the model space.</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Looking Ahead.</strong> With the "spaces" arc complete (metric, normed, Banach, Hilbert, projections), we now turn to the "big theorems" arc. Chapter 5 introduces bounded linear operators, the maps between normed spaces, setting the stage for the Hahn-Banach, Baire Category, Uniform Boundedness, and Open Mapping theorems that form the pillars of Banach space theory.</p>
+</div>
+
 <h2>5 &mdash; Least Squares Applications</h2>
 
 <h3>5.1 Abstract Least Squares</h3>

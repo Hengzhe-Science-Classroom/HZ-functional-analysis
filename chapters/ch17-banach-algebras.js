@@ -11,7 +11,16 @@ window.CHAPTERS.push({
         {
             id: 'ch17-sec01',
             title: 'Banach Algebras',
-            content: `<h2>Banach Algebras</h2>
+            content: `
+<div class="bridge-block chapter-opening">
+<p><strong>Algebraic Structure Meets Topology.</strong> In Chapters 14-16, we developed spectral theory for compact operators. Now we take a broader view, studying the algebraic structure of spaces of operators (and more general algebras with norms). Banach algebras, Banach spaces with a compatible multiplication, unify operator theory, harmonic analysis, and complex function theory. The Gelfand transform, the central tool of this chapter, connects abstract algebras to concrete function algebras.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define Banach algebras, verify the axioms for key examples (\(\mathcal{B}(X)\), \(C(K)\), \(\ell^1(\mathbb{Z})\)), prove the invertibility of elements close to the identity via Neumann series, and show that the set of invertible elements is open.</p>
+</div>
+
+<h2>Banach Algebras</h2>
 <p>A Banach algebra is a Banach space equipped with a compatible multiplication. This algebraic structure enables a powerful synthesis of algebra and analysis, with far-reaching consequences in operator theory, harmonic analysis, and quantum mechanics.</p>
 
 <div class="env-block definition">
@@ -301,7 +310,16 @@ window.CHAPTERS.push({
         {
             id: 'ch17-sec02',
             title: 'Spectrum and Resolvent',
-            content: `<h2>Spectrum and Resolvent</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>Spectrum in the Algebraic Setting.</strong> In Chapter 16, we studied the spectrum of an operator on a Banach space. In a Banach algebra, the spectrum is defined purely algebraically: \(\sigma(a) = \{\lambda : \lambda e - a \text{ is not invertible}\}\). This abstract viewpoint reveals that spectral theory is fundamentally algebraic, not tied to any particular representation.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define the spectrum and resolvent in a unital Banach algebra, prove the spectrum is nonempty and compact, establish the spectral radius formula \(r(a) = \lim \|a^n\|^{1/n}\), and develop analytic function theory for the resolvent.</p>
+</div>
+
+<h2>Spectrum and Resolvent</h2>
 <p>The spectrum generalizes eigenvalues from matrix theory to the Banach algebra setting. It is one of the most fundamental concepts in operator theory and functional analysis.</p>
 
 <div class="env-block definition">
@@ -589,7 +607,16 @@ The <strong>resolvent set</strong> is \\(\\rho(a) = \\mathbb{C} \\setminus \\sig
         {
             id: 'ch17-sec03',
             title: 'The Gelfand Transform',
-            content: `<h2>The Gelfand Transform</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>From Algebras to Functions.</strong> The Gelfand transform is the most powerful tool in commutative Banach algebra theory. It maps every element of a commutative Banach algebra to a continuous function on the character space (the space of multiplicative linear functionals). This generalizes the Fourier transform, which is the Gelfand transform of \(\ell^1(\mathbb{Z})\).</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define characters (multiplicative linear functionals), prove they are automatically continuous and of norm one, construct the Gelfand topology on the character space, and define the Gelfand transform. We then identify the Fourier transform as a special case.</p>
+</div>
+
+<h2>The Gelfand Transform</h2>
 <p>The Gelfand transform is the key tool that connects commutative Banach algebras to function algebras. It provides a concrete representation of abstract algebraic elements as continuous functions.</p>
 
 <div class="env-block definition">
@@ -957,7 +984,16 @@ equipped with the weak* topology inherited from \\(A^*\\).</p>
         {
             id: 'ch17-sec04',
             title: 'C*-Algebras',
-            content: `<h2>C*-Algebras</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>Adding an Involution.</strong> C*-algebras are Banach algebras with an involution \(a \mapsto a^*\) satisfying \(\|a^*a\| = \|a\|^2\). This single identity, the C*-identity, has extraordinary consequences. For commutative C*-algebras, the Gelfand transform becomes an <em>isometric</em> isomorphism onto \(C(K)\), giving a complete characterization.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define C*-algebras, prove the Gelfand-Naimark theorem for commutative C*-algebras (every commutative C*-algebra is isometrically *-isomorphic to \(C(K)\)), and study the spectrum of self-adjoint and normal elements.</p>
+</div>
+
+<h2>C*-Algebras</h2>
 <p>C*-algebras are Banach algebras with an involution satisfying a fundamental identity. They provide the mathematical framework for quantum mechanics and are among the most beautiful objects in functional analysis.</p>
 
 <div class="env-block definition">
@@ -1272,7 +1308,20 @@ Moreover, \\(\\widehat{a^*} = \\overline{\\hat{a}}\\) (the transform intertwines
         {
             id: 'ch17-sec05',
             title: 'Continuous Functional Calculus',
-            content: `<h2>Continuous Functional Calculus</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>Functions of Operators.</strong> Given a normal element \(a\) in a C*-algebra and a continuous function \(f\), we can define \(f(a)\) in a way that respects the algebraic and topological structure. This continuous functional calculus is the gateway to the general spectral theorem and has applications throughout operator theory and quantum mechanics.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We construct the continuous functional calculus for normal elements, prove the spectral mapping theorem \(\sigma(f(a)) = f(\sigma(a))\), and apply it to prove positivity results and square root existence in C*-algebras.</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Looking Ahead.</strong> The continuous functional calculus handles bounded operators. But many important operators in physics and PDE (differentiation, the Laplacian, the Hamiltonian) are <em>unbounded</em>. Chapter 18 develops the theory of unbounded operators, extending spectral theory to these essential but technically challenging objects.</p>
+</div>
+
+<h2>Continuous Functional Calculus</h2>
 <p>The continuous functional calculus allows us to apply continuous functions to elements of a C*-algebra. This is one of the most powerful tools in operator theory, enabling us to take square roots, absolute values, and more.</p>
 
 <div class="env-block theorem">

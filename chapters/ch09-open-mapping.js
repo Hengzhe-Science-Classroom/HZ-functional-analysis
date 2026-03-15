@@ -11,7 +11,16 @@ window.CHAPTERS.push({
         {
             id: 'ch09-sec01',
             title: 'Open Mappings',
-            content: `<h2>Open Mappings</h2>
+            content: `
+<div class="bridge-block chapter-opening">
+<p><strong>Structure Theorems for Banach Spaces.</strong> The Hahn-Banach Theorem (Chapter 6) extended functionals; the Uniform Boundedness Principle (Chapter 8) controlled families of operators. Now we complete the trio of "big theorems" with the Open Mapping Theorem and the Closed Graph Theorem. These results reveal that Banach spaces have a remarkable rigidity: bijective bounded maps are automatically isomorphisms, and operators with closed graphs are automatically bounded.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> Before proving the Open Mapping Theorem, we study open maps in their own right. We define what it means for a map to send open sets to open sets, characterize openness via the ball criterion, and see why non-surjective maps typically fail to be open.</p>
+</div>
+
+<h2>Open Mappings</h2>
 <p>In topology, a continuous map sends open sets to... well, not necessarily open sets. The concept of an <em>open mapping</em> captures a stronger structural property that plays a central role in functional analysis.</p>
 
 <div class="env-block definition">
@@ -289,7 +298,16 @@ window.CHAPTERS.push({
         {
             id: 'ch09-sec02',
             title: 'The Open Mapping Theorem',
-            content: `<h2>The Open Mapping Theorem</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>Surjectivity Implies Openness.</strong> The Open Mapping Theorem (Banach-Schauder Theorem) is a deep result: every surjective bounded linear operator between Banach spaces is an open map. The proof uses the Baire Category Theorem to show that the image of the unit ball contains a ball around the origin.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove the Open Mapping Theorem in two stages: first showing the image of the unit ball is "almost" a ball (Baire category), then bootstrapping to an exact ball (completeness and iteration). We highlight that both domain and codomain must be complete.</p>
+</div>
+
+<h2>The Open Mapping Theorem</h2>
 <p>The Open Mapping Theorem (also called the Banach-Schauder theorem) is one of the cornerstones of functional analysis. It says that a surjective bounded linear operator between Banach spaces is automatically an open map. The proof uses the Baire Category Theorem in a fundamental way.</p>
 
 <div class="env-block theorem">
@@ -577,7 +595,16 @@ window.CHAPTERS.push({
         {
             id: 'ch09-sec03',
             title: 'Bounded Inverse Theorem',
-            content: `<h2>Bounded Inverse Theorem</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>Automatic Continuity of Inverses.</strong> The Open Mapping Theorem has a spectacular corollary: if a bounded linear bijection exists between Banach spaces, then its inverse is automatically bounded. This means that being a topological isomorphism is "automatic" for algebraic isomorphisms between Banach spaces.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We derive the Bounded Inverse Theorem from OMT, prove that two complete norms on the same vector space making a linear map continuous in both must be equivalent, and discuss the failure of the theorem without completeness.</p>
+</div>
+
+<h2>Bounded Inverse Theorem</h2>
 <p>The Bounded Inverse Theorem (also known as the Inverse Mapping Theorem) is an immediate and powerful corollary of the Open Mapping Theorem. It provides the remarkable conclusion that an algebraic inverse of a bounded linear bijection is automatically bounded.</p>
 
 <div class="env-block theorem">
@@ -841,7 +868,16 @@ window.CHAPTERS.push({
         {
             id: 'ch09-sec04',
             title: 'Closed Graph Theorem',
-            content: `<h2>Closed Graph Theorem</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>Boundedness from the Graph.</strong> The Closed Graph Theorem provides an alternative route to proving operators are bounded: instead of estimating the operator norm directly, we need only show that the graph \(\{(x, Tx) : x \in X\}\) is closed in \(X \times Y\). This is often far easier to verify in practice.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define the graph of an operator, prove the Closed Graph Theorem using the Open Mapping Theorem, and explain why a closed graph is a natural condition (it says "if \(x_n \to x\) and \(Tx_n \to y\), then \(y = Tx\)").</p>
+</div>
+
+<h2>Closed Graph Theorem</h2>
 <p>The Closed Graph Theorem provides another way to verify boundedness of a linear operator: instead of directly estimating \\(\\|Tx\\|\\), one can check whether the graph of \\(T\\) is closed. This is often easier in practice.</p>
 
 <div class="env-block definition">
@@ -1072,7 +1108,20 @@ window.CHAPTERS.push({
         {
             id: 'ch09-sec05',
             title: 'Applications',
-            content: `<h2>Applications</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>The Big Theorems at Work.</strong> The Open Mapping and Closed Graph theorems have far-reaching consequences. In this section, we apply them to prove automatic continuity results, the Hellinger-Toeplitz theorem (everywhere-defined symmetric operators on Hilbert spaces are bounded), and characterize complemented subspaces.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove Hellinger-Toeplitz, characterize projections onto complemented subspaces, show that two complete norms with a continuous identity map must be equivalent, and survey additional applications of automatic continuity.</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Looking Ahead.</strong> With the four pillars of Banach space theory (Hahn-Banach, Baire, UBP, OMT/CGT) in place, we begin the "duality" arc. Chapter 10 studies dual spaces, the spaces of continuous linear functionals, systematically. The interplay between a space and its dual is one of the richest themes in functional analysis.</p>
+</div>
+
+<h2>Applications</h2>
 <p>The Open Mapping Theorem, Bounded Inverse Theorem, and Closed Graph Theorem form a triad of structure theorems that have far-reaching consequences. We present several important applications.</p>
 
 <h3>Automatic Continuity</h3>

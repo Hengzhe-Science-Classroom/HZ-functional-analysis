@@ -11,7 +11,16 @@ window.CHAPTERS.push({
         {
             id: 'ch18-sec01',
             title: 'Densely Defined Operators',
-            content: `<h2>Densely Defined Operators</h2>
+            content: `
+<div class="bridge-block chapter-opening">
+<p><strong>Beyond Bounded Operators.</strong> Throughout Chapters 5-17, we studied bounded operators, which are defined on the entire space and continuous. But many of the most important operators in mathematics and physics, differentiation, the Laplacian, the momentum operator in quantum mechanics, are <em>unbounded</em>. They are only defined on a dense subspace and cannot be extended continuously to the whole space. This chapter develops the theory needed to handle these essential operators.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define unbounded operators as linear maps \(T: \mathcal{D}(T) \to H\) where \(\mathcal{D}(T)\) is a dense subspace. We study their graphs, closedness, and closability, establishing the framework needed for adjoint and spectral theory.</p>
+</div>
+
+<h2>Densely Defined Operators</h2>
 <p>Up to now we have studied operators \\(T: X \\to Y\\) defined on the entire space \\(X\\). Many of the most important operators in analysis and physics, however, are only defined on a <em>dense subspace</em> of the Hilbert space. The differential operator \\(d/dx\\) on \\(L^2(\\mathbb{R})\\), for instance, cannot act on every \\(L^2\\) function&mdash;only on those that are differentiable in a suitable sense.</p>
 
 <div class="env-block definition">
@@ -260,7 +269,16 @@ window.CHAPTERS.push({
         {
             id: 'ch18-sec02',
             title: 'Adjoint of an Unbounded Operator',
-            content: `<h2>Adjoint of an Unbounded Operator</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>Defining the Adjoint Carefully.</strong> For bounded operators, the adjoint \(T^*\) is defined on the whole space. For unbounded operators, the domain of \(T^*\) must be carefully constructed. The adjoint's domain encodes regularity information, and the relationship between \(\mathcal{D}(T)\) and \(\mathcal{D}(T^*)\) is central to self-adjointness theory.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define \(T^*\) for densely defined operators, prove the graph decomposition \(H \oplus H = \overline{\operatorname{Graph}(T)} \oplus U\operatorname{Graph}(T^*)\), and show that \(T\) is closable if and only if \(T^*\) is densely defined.</p>
+</div>
+
+<h2>Adjoint of an Unbounded Operator</h2>
 <p>For bounded operators \\(T \\in B(H)\\), the adjoint \\(T^*\\) is defined on all of \\(H\\) by the Riesz representation theorem. For unbounded operators, the construction is more delicate: the adjoint may have a smaller (or even trivial) domain.</p>
 
 <div class="env-block definition">
@@ -479,7 +497,16 @@ window.CHAPTERS.push({
         {
             id: 'ch18-sec03',
             title: 'Symmetric and Self-Adjoint Operators',
-            content: `<h2>Symmetric and Self-Adjoint Operators</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>The Crucial Distinction.</strong> A symmetric operator satisfies \(\langle Tx, y \rangle = \langle x, Ty \rangle\) for all \(x, y \in \mathcal{D}(T)\). A self-adjoint operator satisfies \(T = T^*\), meaning additionally \(\mathcal{D}(T) = \mathcal{D}(T^*)\). In finite dimensions these are the same; in infinite dimensions, the gap between symmetry and self-adjointness is where the deepest phenomena live.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define symmetric and self-adjoint operators, prove that self-adjoint operators have real spectrum, introduce deficiency indices as the obstruction to self-adjoint extensions, and study von Neumann's extension theory.</p>
+</div>
+
+<h2>Symmetric and Self-Adjoint Operators</h2>
 <p>The distinction between symmetric and self-adjoint operators is one of the most subtle and important points in functional analysis. In finite dimensions, the notions coincide. In infinite dimensions, they diverge dramatically, and only self-adjoint operators have a full spectral theorem.</p>
 
 <div class="env-block definition">
@@ -715,7 +742,16 @@ window.CHAPTERS.push({
         {
             id: 'ch18-sec04',
             title: 'Spectral Theorem for Unbounded Self-Adjoint Operators',
-            content: `<h2>Spectral Theorem for Unbounded Self-Adjoint Operators</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>The General Spectral Theorem.</strong> The spectral theorem for compact self-adjoint operators (Chapter 16) decomposed an operator into a sum over eigenvalues. The general spectral theorem replaces the sum with an integral: \(T = \int \lambda \, dE(\lambda)\), where \(E\) is a projection-valued measure. This is the mathematical foundation of quantum mechanics.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We state the spectral theorem for unbounded self-adjoint operators, define projection-valued measures, and construct the functional calculus \(f(T) = \int f(\lambda) \, dE(\lambda)\). We then derive consequences for the spectrum and discuss the relationship to the compact case.</p>
+</div>
+
+<h2>Spectral Theorem for Unbounded Self-Adjoint Operators</h2>
 <p>The spectral theorem is the crown jewel of operator theory. For bounded self-adjoint operators, we established it in earlier chapters. For unbounded self-adjoint operators, the statement requires <strong>projection-valued measures</strong> (spectral measures) on the real line.</p>
 
 <div class="env-block definition">
@@ -1046,7 +1082,20 @@ window.CHAPTERS.push({
         {
             id: 'ch18-sec05',
             title: 'Applications to Quantum Mechanics',
-            content: `<h2>Applications to Quantum Mechanics</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>Operators as Observables.</strong> In quantum mechanics, physical observables (position, momentum, energy) are represented by self-adjoint operators on a Hilbert space. The spectral theorem determines the possible measurement outcomes (the spectrum) and the probability of each outcome (the spectral measure). This section shows how the abstract theory of unbounded operators directly models physical reality.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define the position and momentum operators, verify they are self-adjoint (on appropriate domains), prove the canonical commutation relation \([X, P] = i\hbar I\), and discuss Stone's theorem on one-parameter unitary groups and time evolution.</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Looking Ahead.</strong> Self-adjoint operators and spectral theory give us the tools for quantum mechanics and PDE. The final chapter, Chapter 19, introduces distributions and Sobolev spaces, the functional-analytic framework for weak solutions of partial differential equations, bringing the entire course full circle from abstract spaces to concrete applications.</p>
+</div>
+
+<h2>Applications to Quantum Mechanics</h2>
 <p>Quantum mechanics is the primary source and motivation for the theory of unbounded operators. The mathematical framework of quantum mechanics, formalized by von Neumann, is built directly on self-adjoint operators on Hilbert spaces.</p>
 
 <div class="env-block definition">

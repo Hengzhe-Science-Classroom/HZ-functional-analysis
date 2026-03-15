@@ -10,6 +10,14 @@ window.CHAPTERS.push({
             id: 'sublinear-functionals',
             title: 'Sublinear Functionals',
             content: `
+<div class="bridge-block chapter-opening">
+<p><strong>The First Pillar of Banach Space Theory.</strong> In Chapter 5, we studied bounded linear operators and posed a fundamental question: given a bounded linear functional defined on a subspace, can we extend it to the whole space without increasing its norm? The Hahn-Banach Theorem gives a resounding "yes," and its consequences permeate all of functional analysis. This chapter develops the theorem in its analytic and geometric forms, together with its most important applications.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> Before proving Hahn-Banach, we need the concept of a sublinear functional, which serves as the dominating function in the extension process. We define sublinear functionals, study their properties, and show how they control linear functionals.</p>
+</div>
+
                 <h2>Sublinear Functionals</h2>
 
                 <p>The Hahn\u2013Banach theorem is one of the cornerstones of functional analysis. Before stating it, we introduce the class of functions that serve as dominating bounds for linear functionals.</p>
@@ -223,6 +231,14 @@ window.CHAPTERS.push({
             id: 'hahn-banach-real',
             title: 'Hahn\u2013Banach Extension (Real Case)',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>The Extension Machine.</strong> With sublinear functionals in hand, we are ready for the main result. The Hahn-Banach Extension Theorem, in its real version, extends a linear functional dominated by a sublinear functional from a subspace to the whole space. The proof is a beautiful application of Zorn's lemma.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove the one-dimensional extension lemma, apply Zorn's lemma to obtain the full extension, and derive the norm-preserving version for normed spaces. The key insight is that at each extension step, the dominating function constrains the new value to a closed interval.</p>
+</div>
+
                 <h2>The Hahn\u2013Banach Extension Theorem</h2>
 
                 <p>The central idea is strikingly simple: if a linear functional on a subspace is bounded above by a sublinear functional, it can be extended to the whole space while preserving this domination. The proof proceeds in two stages: a one-dimensional extension step, then a maximality argument via Zorn's lemma.</p>
@@ -436,6 +452,14 @@ window.CHAPTERS.push({
             id: 'complex-consequences',
             title: 'Complex Version and Consequences',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>From Real to Complex.</strong> Most spaces in applications are complex. Extending Hahn-Banach to complex scalars requires a clever trick: the real part of a complex-linear functional determines the whole functional. This section also harvests the most important consequences of Hahn-Banach for normed spaces.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove the complex Hahn-Banach theorem, derive norm-attaining functionals for every element, prove that \(X^*\) separates points, and establish that the norm of an element equals the supremum over the dual unit ball.</p>
+</div>
+
                 <h2>The Complex Hahn\u2013Banach Theorem</h2>
 
                 <p>The real Hahn\u2013Banach theorem extends naturally to complex vector spaces via an elegant trick due to Bohnenblust and Sobczyk (and independently Soukhomlinov).</p>
@@ -680,6 +704,14 @@ window.CHAPTERS.push({
             id: 'geometric-hahn-banach',
             title: 'Geometric Hahn\u2013Banach',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Separation of Convex Sets.</strong> The analytic Hahn-Banach theorem extends functionals; its geometric counterpart <em>separates</em> convex sets with hyperplanes. This geometric version is the foundation of convex analysis, optimization theory, and the study of dual spaces.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove the separation theorem (a hyperplane strictly separates a point from a closed convex set) and the supporting hyperplane theorem. We then use these results to characterize the closed convex hull as the intersection of half-spaces.</p>
+</div>
+
                 <h2>Separation of Convex Sets</h2>
 
                 <p>The Hahn\u2013Banach theorem has a powerful geometric interpretation: disjoint convex sets can be separated by hyperplanes. This is the infinite-dimensional generalization of the separating hyperplane theorem from convex geometry.</p>
@@ -918,6 +950,18 @@ window.CHAPTERS.push({
             id: 'applications',
             title: 'Applications',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Hahn-Banach at Work.</strong> The Hahn-Banach theorem is not just a theoretical tool; it has striking concrete applications. In this section, we use it to construct Banach limits (extending the ordinary limit functional to all bounded sequences) and to prove existence results in approximation theory.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We construct Banach limits, prove the existence of supporting hyperplanes for convex bodies, and apply separation to prove minimax-type results. These applications demonstrate the power of the existence-by-extension philosophy.</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Looking Ahead.</strong> Hahn-Banach is a "soft" result: it proves existence without constructive bounds. The next three chapters develop "hard" results that require completeness. Chapter 7 introduces the Baire Category Theorem, the topological engine behind the Uniform Boundedness Principle (Chapter 8) and the Open Mapping Theorem (Chapter 9).</p>
+</div>
+
                 <h2>Applications of Hahn\u2013Banach</h2>
 
                 <p>The Hahn\u2013Banach theorem has remarkably diverse applications, from constructing exotic objects like Banach limits to proving fundamental results about convex bodies and dual spaces.</p>

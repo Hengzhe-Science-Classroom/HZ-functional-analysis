@@ -12,6 +12,14 @@ window.CHAPTERS.push({
             id: 'ch08-sec01',
             title: 'Pointwise vs Uniform Boundedness',
             content: `
+<div class="bridge-block chapter-opening">
+<p><strong>From Baire Category to Operator Bounds.</strong> The Baire Category Theorem (Chapter 7) told us that complete spaces cannot be decomposed into countably many "thin" pieces. Now we harvest the first major consequence for operator theory: the Uniform Boundedness Principle. This remarkable theorem says that a family of bounded operators that is bounded at each point must be bounded uniformly in the operator norm, a conclusion that would be false without completeness.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We carefully distinguish pointwise boundedness (for each \(x\), \(\sup_\alpha \|T_\alpha x\| < \infty\)) from uniform boundedness (\(\sup_\alpha \|T_\alpha\| < \infty\)), and show by example that the implication from pointwise to uniform fails in incomplete spaces.</p>
+</div>
+
                 <h2>Pointwise vs Uniform Boundedness</h2>
 
                 <p>One of the most striking phenomena in functional analysis is the passage from <em>pointwise</em> information to <em>uniform</em> conclusions. In finite dimensions, this passage is automatic; in infinite dimensions, it requires the heavy machinery of Baire category theory developed in the previous chapter.</p>
@@ -245,6 +253,14 @@ window.CHAPTERS.push({
             id: 'ch08-sec02',
             title: 'Banach-Steinhaus Theorem',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>The Main Theorem.</strong> With the distinction between pointwise and uniform boundedness clear, we prove the Banach-Steinhaus Theorem: pointwise boundedness plus completeness of the domain implies uniform boundedness. The proof is a direct application of the Baire Category Theorem.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We state and prove the Banach-Steinhaus Theorem, highlight the role of completeness in the proof (the domain must be Banach), and show that the conclusion can be strengthened to give explicit norm bounds.</p>
+</div>
+
                 <h2>The Banach-Steinhaus Theorem</h2>
 
                 <p>We now state and prove the crown jewel of this chapter. The theorem was independently discovered by Stefan Banach and Hugo Steinhaus in 1927, though it was also known to Hans Hahn around the same time.</p>
@@ -453,6 +469,14 @@ window.CHAPTERS.push({
             id: 'ch08-sec03',
             title: 'Application: Convergence of Operators',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Convergence via Uniform Bounds.</strong> The Uniform Boundedness Principle has an immediate and powerful consequence for sequences of operators: if \(T_n x \to Tx\) pointwise, then the \(T_n\) are automatically uniformly bounded, and the limit \(T\) is bounded. This controls the limit operator "for free."</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove that pointwise limits of bounded operators are bounded, establish conditions for operator convergence from a dense subspace to extend to the whole space, and apply these results to summability methods and approximation operators.</p>
+</div>
+
                 <h2>Application: Convergence of Operators</h2>
 
                 <p>The Uniform Boundedness Principle has immediate and far-reaching consequences for sequences of operators. When operators converge pointwise, the UBP reveals hidden structure: the norms must stay bounded, and the limit inherits boundedness.</p>
@@ -721,6 +745,14 @@ window.CHAPTERS.push({
             id: 'ch08-sec04',
             title: 'Application: Divergence of Fourier Series',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>A Classical Application.</strong> One of the most celebrated applications of the Uniform Boundedness Principle is to Fourier analysis: there exists a continuous function whose Fourier series diverges at a point. The proof uses UBP to show that the norms of the partial-sum operators (Dirichlet kernels) blow up.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We compute the operator norms of partial Fourier sums (the Lebesgue constants), show they grow like \(\log n\), and conclude via UBP that pointwise convergence fails for some continuous function. This is a striking example of a non-constructive existence proof.</p>
+</div>
+
                 <h2>Application: Divergence of Fourier Series</h2>
 
                 <p>One of the most celebrated applications of the Uniform Boundedness Principle is the existence of a continuous function whose Fourier series diverges at a point. This result, due to du Bois-Reymond (1876), was one of the early surprises of Fourier analysis. The UBP provides an elegant and concise proof.</p>
@@ -986,6 +1018,18 @@ window.CHAPTERS.push({
             id: 'ch08-sec05',
             title: 'Condensation of Singularities',
             content: `
+<div class="bridge-block section-bridge">
+<p><strong>Strengthening the Principle.</strong> The Condensation of Singularities technique pushes the Uniform Boundedness Principle further: not only can we find one point of divergence, but the set of "bad points" is residual (topologically generic). This shows that pathological behavior is often the <em>typical</em> behavior.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove the condensation of singularities theorem (the set where \(\sup_n \|T_n x\| = \infty\) is either empty or residual), apply it to sharpen the Fourier divergence result, and discuss the UBP dichotomy: either uniform boundedness holds or divergence is generic.</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Looking Ahead.</strong> The Uniform Boundedness Principle controls families of operators. In Chapter 9, we tackle individual operators: the Open Mapping Theorem shows that surjective bounded operators between Banach spaces are automatically open maps, and the Closed Graph Theorem provides a powerful criterion for boundedness.</p>
+</div>
+
                 <h2>Condensation of Singularities</h2>
 
                 <p>The Banach-Steinhaus theorem reveals a remarkable dichotomy: for a family of bounded operators on a Banach space, either the family is uniformly bounded (the "tame" case) or the set of vectors on which the family is unbounded is topologically huge. This phenomenon is known as the <strong>condensation of singularities</strong>.</p>

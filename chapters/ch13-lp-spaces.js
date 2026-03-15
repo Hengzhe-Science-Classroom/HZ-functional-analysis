@@ -12,6 +12,14 @@ window.CHAPTERS.push({
       id: 'measure-theory-review',
       title: 'Measure Theory Review',
       content: `
+<div class="bridge-block chapter-opening">
+<p><strong>The Workhorses of Analysis.</strong> The \(L^p\) spaces are where abstract functional analysis meets concrete applications. Every concept we have developed, norms, completeness, duality, reflexivity, weak compactness, comes to life in \(L^p\). These spaces are the natural habitat for Fourier analysis, probability theory, PDE, and much of applied mathematics. This chapter provides a self-contained treatment, connecting the abstract theory of Chapters 1-12 to the measure-theoretic foundations.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We review the essential measure theory: sigma-algebras, measures, measurable functions, and the Lebesgue integral. This section ensures we have the prerequisites for defining \(L^p\) rigorously in the next section.</p>
+</div>
+
         <div class="env-block intuition">
           <p><strong>Why measure theory?</strong> The \\(L^p\\) spaces are built on the Lebesgue integral, which extends the Riemann integral to a vastly larger class of functions. To define \\(L^p\\), we need \\(\\sigma\\)-algebras, measurable functions, and the Lebesgue integral. This section is a rapid review of the essential prerequisites.</p>
         </div>
@@ -302,6 +310,14 @@ window.CHAPTERS.push({
       id: 'lp-spaces-definition',
       title: 'L^p Spaces',
       content: `
+<div class="bridge-block section-bridge">
+<p><strong>Defining the Spaces.</strong> With measure theory in hand, we define \(L^p\) spaces as equivalence classes of measurable functions with finite \(p\)-th moment. The key challenge is showing that \(\|\cdot\|_p\) is indeed a norm, which requires the classical inequalities of Holder and Minkowski.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define \(L^p(\mu)\) for \(1 \leq p \leq \infty\), prove Holder's and Minkowski's inequalities (establishing the norm), and compare the \(L^p\) norms for different values of \(p\). We also address the quotient construction that identifies functions differing on null sets.</p>
+</div>
+
         <div class="env-block definition">
           <p><strong>Definition (\\(L^p\\) Space):</strong> Let \\((X, \\mathcal{M}, \\mu)\\) be a measure space and \\(1 \\leq p < \\infty\\). Define</p>
           \\[ \\mathcal{L}^p(X, \\mu) = \\left\\{ f: X \\to \\mathbb{R} \\text{ (or } \\mathbb{C}\\text{)} : f \\text{ measurable}, \\; \\int_X |f|^p \\, d\\mu < \\infty \\right\\} \\]
@@ -565,6 +581,14 @@ window.CHAPTERS.push({
       id: 'completeness-riesz-fischer',
       title: 'Completeness (Riesz\u2013Fischer)',
       content: `
+<div class="bridge-block section-bridge">
+<p><strong>\(L^p\) Spaces Are Banach.</strong> The Riesz-Fischer theorem establishes that \(L^p\) spaces are complete, making them Banach spaces (and \(L^2\) a Hilbert space). The proof technique, extracting an almost-everywhere convergent subsequence from a Cauchy sequence, is a paradigm that recurs throughout measure theory.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove the Riesz-Fischer theorem, carefully distinguishing convergence in \(L^p\)-norm from pointwise convergence. We also study the "typewriter sequence," which shows that \(L^p\)-convergence does not imply pointwise convergence.</p>
+</div>
+
         <div class="env-block intuition">
           <p><strong>The key result:</strong> \\(L^p\\) is a Banach space for \\(1 \\leq p \\leq \\infty\\). The proof strategy \u2014 extracting a rapidly convergent subsequence and using the completeness of \\(\\mathbb{R}\\) pointwise \u2014 is a paradigm that reappears throughout functional analysis.</p>
         </div>
@@ -806,6 +830,14 @@ window.CHAPTERS.push({
       id: 'dense-subspaces',
       title: 'Dense Subspaces',
       content: `
+<div class="bridge-block section-bridge">
+<p><strong>Approximation in \(L^p\).</strong> For many purposes, it suffices to work with "nice" functions (continuous, smooth, simple) and then pass to limits. Dense subspace results tell us exactly which approximations are valid. Separability of \(L^p\) for \(1 \leq p < \infty\) is a direct consequence.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove that simple functions, continuous functions, and \(C_c^\infty\) functions are dense in \(L^p\) for \(1 \leq p < \infty\). We also show that \(L^\infty\) is not separable, highlighting the special role of the endpoint case.</p>
+</div>
+
         <div class="env-block intuition">
           <p><strong>Motivation:</strong> For many purposes (approximation, PDE theory, Fourier analysis), we need to know that "nice" functions are dense in \\(L^p\\). This means any \\(L^p\\) function can be approximated arbitrarily well by simple functions, continuous functions, or even smooth compactly supported functions.</p>
         </div>
@@ -1078,6 +1110,18 @@ window.CHAPTERS.push({
       id: 'duality-of-lp',
       title: 'Duality of L^p',
       content: `
+<div class="bridge-block section-bridge">
+<p><strong>Closing the Duality Circle.</strong> In Chapter 10, we identified \((\ell^p)^* \cong \ell^q\) for sequence spaces. Now we prove the function-space analog: \((L^p)^* \cong L^q\) for \(1 \leq p < \infty\). Combined with the Riesz-Fischer theorem, this confirms that \(L^p\) spaces for \(1 < p < \infty\) are reflexive, while \(L^1\) is not.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove the duality theorem \((L^p)^* \cong L^q\), verify reflexivity for \(1 < p < \infty\), and discuss the failure of reflexivity for \(L^1\) and \(L^\infty\). This completes the duality arc that began in Chapter 10.</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Looking Ahead.</strong> With the \(L^p\) spaces thoroughly understood, we are ready for the final arc: compact operators and spectral theory. Chapter 14 introduces compact operators, which bring finite-dimensional intuition back into infinite-dimensional spaces and are the natural setting for eigenvalue problems.</p>
+</div>
+
         <div class="env-block intuition">
           <p><strong>The big picture:</strong> The dual of \\(L^p\\) is \\(L^q\\) (for \\(1 \\leq p < \\infty\\)), realized via the pairing \\(\\langle f, g \\rangle = \\int fg \\, d\\mu\\). This is one of the most important representation theorems in functional analysis. The proof uses the Radon-Nikodym theorem to identify abstract linear functionals with concrete functions.</p>
         </div>

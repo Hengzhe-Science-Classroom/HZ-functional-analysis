@@ -11,7 +11,16 @@ window.CHAPTERS.push({
         {
             id: 'ch12-sec01',
             title: 'Reflexivity',
-            content: `<h2>Reflexivity</h2>
+            content: `
+<div class="bridge-block chapter-opening">
+<p><strong>When a Space Equals Its Double Dual.</strong> In Chapter 10, we defined the canonical embedding \(J: X \to X^{**}\) and asked when it is surjective. In Chapter 11, we saw that weak compactness depends critically on this question. A Banach space \(X\) is <em>reflexive</em> when \(J\) is surjective, meaning \(X\) and \(X^{**}\) are "the same." Reflexive spaces enjoy the best properties of both the norm and weak topologies.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define reflexivity, prove equivalent characterizations (including the Eberlein-Smulian criterion: \(X\) is reflexive iff \(B_X\) is weakly compact), and establish basic stability properties under subspaces and quotients.</p>
+</div>
+
+<h2>Reflexivity</h2>
 <p>Every normed space \\(X\\) embeds isometrically into its double dual \\(X^{**}\\) via the <strong>canonical embedding</strong>. A space is <em>reflexive</em> when this embedding is surjective&mdash;meaning \\(X\\) and \\(X^{**}\\) are essentially the same space.</p>
 
 <h3>The Canonical Embedding</h3>
@@ -325,7 +334,16 @@ window.CHAPTERS.push({
         {
             id: 'ch12-sec02',
             title: 'Examples and Non-Examples',
-            content: `<h2>Examples and Non-Examples</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>A Landscape of Examples.</strong> Which spaces are reflexive and which are not? The answer reveals a clear pattern: \(\ell^p\) and \(L^p\) are reflexive for \(1 < p < \infty\), while \(\ell^1\), \(\ell^\infty\), \(c_0\), \(L^1\), and \(L^\infty\) are not. Understanding <em>why</em> deepens our grasp of the duality structure.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We verify reflexivity for \(\ell^p\) (\(1 < p < \infty\)) and Hilbert spaces, prove \(c_0\) and \(\ell^1\) are not reflexive, and trace the failure to specific functionals in the double dual that lie outside the canonical image.</p>
+</div>
+
+<h2>Examples and Non-Examples</h2>
 <p>Reflexivity is a delicate property&mdash;many classical spaces are reflexive, but several important spaces are not. Understanding which spaces are reflexive is essential for applications in PDE theory, optimization, and probability.</p>
 
 <h3>Reflexive Spaces</h3>
@@ -637,7 +655,16 @@ window.CHAPTERS.push({
         {
             id: 'ch12-sec03',
             title: "James' Theorem",
-            content: `<h2>James' Theorem</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>A Deep Characterization.</strong> James' Theorem gives a striking characterization of reflexivity in terms of norm-attaining functionals: \(X\) is reflexive if and only if every functional in \(X^*\) attains its norm on \(B_X\). This connects the abstract notion of reflexivity to the concrete question of whether optimization problems have solutions.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We state James' Theorem, prove one direction (reflexive implies every functional attains its norm), explore the other direction (the hard part), and discuss James' space, the famous non-reflexive space isometric to its double dual.</p>
+</div>
+
+<h2>James' Theorem</h2>
 <p>James' theorem provides a beautiful geometric characterization of reflexivity: a Banach space is reflexive if and only if every continuous linear functional attains its supremum on the closed unit ball. This is one of the deepest results connecting the geometry and topology of Banach spaces.</p>
 
 <h3>Norm-Attaining Functionals</h3>
@@ -917,7 +944,16 @@ window.CHAPTERS.push({
         {
             id: 'ch12-sec04',
             title: 'Weak Compactness in Reflexive Spaces',
-            content: `<h2>Weak Compactness in Reflexive Spaces</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>The Payoff of Reflexivity.</strong> In reflexive spaces, closed bounded sets are weakly compact, and weakly compact sets are weakly sequentially compact (Eberlein-Smulian). This is the infinite-dimensional substitute for the Heine-Borel theorem, and it underlies many existence results in PDE, optimization, and calculus of variations.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We prove that closed bounded sets in reflexive spaces are weakly compact, derive the Eberlein-Smulian characterization of weak compactness, and apply these results to prove existence of minimizers for weakly lower semicontinuous functionals.</p>
+</div>
+
+<h2>Weak Compactness in Reflexive Spaces</h2>
 <p>One of the most powerful consequences of reflexivity is the equivalence between weak compactness and weak sequential compactness. This is the content of the Eberlein&ndash;Smulian theorem, which is indispensable in variational methods, PDE theory, and optimization.</p>
 
 <h3>Goldstine's Theorem</h3>
@@ -1218,7 +1254,20 @@ window.CHAPTERS.push({
         {
             id: 'ch12-sec05',
             title: 'Uniformly Convex Spaces',
-            content: `<h2>Uniformly Convex Spaces</h2>
+            content: `
+<div class="bridge-block section-bridge">
+<p><strong>Geometry Implies Reflexivity.</strong> Milman-Pettis theorem: every uniformly convex Banach space is reflexive. Uniform convexity is a geometric property of the unit ball, that "midpoints of near-diameter chords are close to the boundary." This gives a powerful geometric sufficient condition for reflexivity.</p>
+</div>
+
+<div class="bridge-block section-roadmap">
+<p><strong>Section Roadmap.</strong> We define uniform convexity, verify it for \(L^p\) (\(1 < p < \infty\)) via Clarkson's inequalities, prove the Milman-Pettis theorem, and use uniform convexity to sharpen approximation results.</p>
+</div>
+
+<div class="bridge-block chapter-closing">
+<p><strong>Looking Ahead.</strong> The duality arc (Chapters 10-12) has given us a rich theory of dual spaces, weak topologies, and reflexivity. Chapter 13 ties this together by studying \(L^p\) spaces in depth, the concrete function spaces where all these abstract theories find their most important applications.</p>
+</div>
+
+<h2>Uniformly Convex Spaces</h2>
 <p>Uniform convexity is a geometric condition on the unit ball that implies reflexivity. This gives a powerful sufficient condition that is easy to verify for many concrete spaces.</p>
 
 <h3>Definition and Basic Properties</h3>
